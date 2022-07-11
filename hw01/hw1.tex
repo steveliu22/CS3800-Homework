@@ -193,11 +193,11 @@ A DFA with 10 states and an alphabet of size 6 will have ONLY 60 transitions, ev
 
 \solution
 
-The number of transitions in a NFA with 10 states and an alphabet size of 6 is in the range of $[0, 650]$. The lower bound is 0 because it's entirely possible for the entire NFA to have 0 transitions for each character in the alphabet.
-The upper bound is 650 because for each given state, each character can have a transition from that state to every state (including itself) in the NFA so that gives $(1$ character $* 10$ possible states $)$ $*$ $(6$ characters in the alphabet$)$ = 600.
-However there are also $\epsilon$-transitions and given the assumption that "there are no $\epsilon$-transitions from a state to itself" then each state can have an $\epsilon$-transition from itself to every other state which means that in total, there are (5 $\epsilon$-transition per state) * (10 states) = 50.
-Adding it all up, the upper-bound number of transitions in this NFA would be $650$.
-\\[3ex] The number of starts states per definition of a DFA has to be 1.
+The number of transitions in a NFA with 10 states and an alphabet size of 6 is in the range of $[0, 690]$. The lower bound is 0 because it's entirely possible for the entire NFA to have 0 transitions for each character in the alphabet.
+The upper bound is 690 because for each given state, each character can have a transition from that state to every state (including itself) in the NFA so that gives $(1$ character $* 10$ possible states $)$ $*$ $(6$ characters in the alphabet$)$ = 600.
+However there are also $\epsilon$-transitions and given the assumption that "there are no $\epsilon$-transitions from a state to itself" then each state can have an $\epsilon$-transition from itself to every other state which means that in total, there are ((10 - 1) $\epsilon$-transition per state) * (10 states) = 90.
+Adding it all up, the upper-bound number of transitions in this NFA would be $690$.
+\\[3ex] The number of starts states per definition of a NFA has to be 1.
 \\[3ex] The number of accept states is in the range of $[0, 10]$ since there can be as many all of the states being accept states and as a few as none of the states being accept states.
 
 
