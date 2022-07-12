@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1657547606 "c:/Users/steve/Desktop/CS3800 Homeworks/hw01/hw1.tex" "hw1.pdf" "hw1" 1657547608
+["pdflatex"] 1657582068 "c:/Users/steve/Desktop/CS3800 Homeworks/hw01/hw1.tex" "hw1.pdf" "hw1" 1657582070
   "C:/Users/steve/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1657328666 97205 3fb51b557d06aae17c4f86c5a0b69e11 ""
   "C:/Users/steve/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1657328568 10326700 cae89d106d926737994da43e9d6d908e ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -198,10 +198,13 @@
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1636713860 4545 d84d0b20a11b9c36c6ecf45697be591c ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Users/steve/Desktop/CS3800 Homeworks/hw01/hw1.tex" 1657547605 10964 be0f6dcce93b9d291d1d41ec767ab8cb ""
-  "hw1.aux" 1657547608 591 b45aeb9ec6b5e7aaa946e53b89d41268 "pdflatex"
+  "c:/Users/steve/Desktop/CS3800 Homeworks/hw01/hw1.tex" 1657582066 11200 1a895bdae5aae0bc40ba41ba38f10629 ""
+  "hw1.aux" 1657582070 591 b45aeb9ec6b5e7aaa946e53b89d41268 "pdflatex"
   "hw1.out" 0 -1 0 "pdflatex"
-  "hw1.tex" 1657547605 10964 be0f6dcce93b9d291d1d41ec767ab8cb ""
+  "hw1.tex" 1657582066 11200 1a895bdae5aae0bc40ba41ba38f10629 ""
+  "images/prob3.jpg" 1657580837 171396 9762aa47a8a1a40cfe8e28bac798b2bd ""
+  "images/prob4.jpg" 1657579567 598434 92acdcda5fa4bafeed3a130a18db4808 ""
+  "images/prob5a.jpg" 1657581868 210373 c4a15a73e430343f8d854691c8c44862 ""
   (generated)
   "hw1.aux"
   "hw1.log"

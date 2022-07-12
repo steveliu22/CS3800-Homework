@@ -153,7 +153,7 @@ Due~\hwdue}
 
 \bigskip
 {\large
-\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+\noindent Name: Steve Liu\yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
 
 \vspace{15pt}
 \begin{itemize}
@@ -194,7 +194,7 @@ A DFA with 10 states and an alphabet of size 6 will have ONLY 60 transitions, ev
 \solution
 
 The number of transitions in a NFA with 10 states and an alphabet size of 6 is in the range of $[0, 690]$. The lower bound is 0 because it's entirely possible for the entire NFA to have 0 transitions for each character in the alphabet.
-The upper bound is 690 because for each given state, each character can have a transition from that state to every state (including itself) in the NFA so that gives $(1$ character $* 10$ possible states $)$ $*$ $(6$ characters in the alphabet$)$ = 600.
+The upper bound is 690 because for each given state, each character can have a transition from that state to every state (including itself) in the NFA so that gives $(1$ character $* 10$ possible transition states $)$ $*$ $(6$ characters in the alphabet$)$ * 10 states = 600.
 However there are also $\epsilon$-transitions and given the assumption that "there are no $\epsilon$-transitions from a state to itself" then each state can have an $\epsilon$-transition from itself to every other state which means that in total, there are ((10 - 1) $\epsilon$-transition per state) * (10 states) = 90.
 Adding it all up, the upper-bound number of transitions in this NFA would be $690$.
 \\[3ex] The number of starts states per definition of a NFA has to be 1.
@@ -252,6 +252,8 @@ Draw a DFA which recognizes $L$. Be sure to include all states and transitions a
 
 \solution
 
+\includegraphics[width=14cm, height=7cm]{./images/prob3.jpg}
+
 
 
 
@@ -271,7 +273,7 @@ Let $\Sigma = \{a,b\}$. Let $L1$ be the language consisting of strings where all
 \noindent Let $M_2$ be the DFA that recognizes $L2$ \\
 \noindent Let $M_3$ be the DFA that recognizes $L1 \cup L2$ where state, $(e, r)$, is a state-pair where $e$ is from $M_1$ and $r$ is from $M_2$ 
  
-
+\includegraphics[width=15cm, height=17cm]{./images/prob4.jpg}
 
 
 \newpage
@@ -283,7 +285,7 @@ Let $\Sigma = \{a,b\}$. Let $L1$ be the language consisting of strings where all
 
 \solution
 
-
+\includegraphics[angle=90,origin=c, width=16cm, height=14cm]{./images/prob5a.jpg}
 
 
 \end{document}
