@@ -153,7 +153,7 @@ Due~\hwdue}
 
 \bigskip
 {\large
-\noindent Name: Steve Liu\yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+\noindent Name: Steve Liu\yourname \vspace{2pt}\\ Collaborators: Jamie Lin, Robert Rau \yourcollaborators}
 
 \vspace{15pt}
 \begin{itemize}
@@ -234,8 +234,9 @@ Determine the language that the following DFA recognizes. Briefly justify your a
 "01000" $\rightarrow$ACCEPT \\\\
 "00000" $\rightarrow$ REJECT \\
 
-\noindent Defining the above DFA as $M$ then the $L(M)$ = \{ $w$ $|$ the number of zeroes in $w$ modulo 3 is 1 \} 
+\noindent Defining the above DFA as $M$ then the $L(M)$ = \{ $w$ $|$ the number of zeroes in $w$ modulo 3 is 1 \} \\
 
+\noindent Justification: The DFA does nothing with 1s so those can be ignored. If we ignore q1 then the DFA basically recognizes the language of all strings in which the number of 0s is divisible by 3 because of the q4 to q2 loop. Thus, the transition from q1 to q2 means that the language now recognizes all strings in which the number of 0s divided by 3 will leave you with an extra 0, in other words the number of zeroes modulo 3 is one.
 
 \newpage
 
@@ -252,7 +253,8 @@ Draw a DFA which recognizes $L$. Be sure to include all states and transitions a
 
 \solution
 
-\includegraphics[width=14cm, height=7cm]{./images/prob3.jpg}
+
+\includegraphics[angle=90,origin=c, width=15cm, height=12cm]{./images/prob41.jpg}
 
 
 
@@ -285,7 +287,7 @@ Let $\Sigma = \{a,b\}$. Let $L1$ be the language consisting of strings where all
 
 \solution
 
-\includegraphics[angle=90,origin=c, width=16cm, height=14cm]{./images/prob5a.jpg}
+\includegraphics[angle=90,origin=c, width=16cm, height=14cm]{./images/problem5a.jpg}
 
 
 \end{document}
