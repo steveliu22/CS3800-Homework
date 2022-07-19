@@ -193,7 +193,7 @@ Convert the following NFA to a DFA. Your DFA should be as simple as possible (e.
 
 \solution
 \\WORK FOR PROBLEM ON NEXT PAGE 
-\includegraphics[angle=-90,origin=c, scale=0.11]{./p1_images/ans.jpg}
+\includegraphics[angle=-90,origin=c, scale=0.11, width= 12cm]{./p1_images/ans.jpg}
 
 \includegraphics[scale=0.1]{./p1_images/work.jpg}
 
@@ -208,7 +208,13 @@ Give a regular expression for the language of words over $\Sigma = \{0, 1\}$ whi
 
 \solution
 
-((01*0) $\cup$ (10*1))*
+\noindent REGULAR EXPRESSION: 0(0 $\cup$ 1)*0 $\cup$ 1(0 $\cup$ 1)*1 \\
+
+\noindent 10101 $\rightarrow$ 1(010)1 is in 1(0 $\cup$ 1)*1 $\rightarrow$ you have the left and right side 1's with 010 in the middle which is in (0 $\cup$ 1)* \\~\\
+\noindent 0101110 $\rightarrow$ 0(10111)0 is in 0(0 $\cup$ 1)*0  $\rightarrow$ you have the left and right side 0's with 10111 in the middle which is in (0 $\cup$ 1)* \\~\\
+\noindent 111 $\rightarrow$ 1(1)1 is in 1(0 $\cup$ 1)*1  $\rightarrow$ you have the left and right side 1's with 1 in the middle which is in (0 $\cup$ 1)* \\~\\
+\noindent 111111011 $\rightarrow$ 1(1111101)1 is in 1(0 $\cup$ 1)*1  $\rightarrow$ you have the left and right side 1's with 1111101 in the middle which is in (0 $\cup$ 1)* \\~\\
+\noindent 0101 cannot be generated because the regular expression recognizes the language of all strings in which the first and last values are either both 0's or both 1's. Since 0101 has a 0 in the beginning and 1 in the end, this string is not in the regular expression. 
 
 
 
