@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1658117513 "c:/Users/steve/Desktop/CS3800 Homeworks/hw02/hw2-1.tex" "hw2-1.pdf" "hw2-1" 1658117516
+["pdflatex"] 1658193361 "c:/Users/steve/Desktop/CS3800 Homeworks/hw02/hw2-1.tex" "hw2-1.pdf" "hw2-1" 1658193364
   "C:/Users/steve/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1657328666 97205 3fb51b557d06aae17c4f86c5a0b69e11 ""
   "C:/Users/steve/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1657328568 10326700 cae89d106d926737994da43e9d6d908e ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -25,6 +25,7 @@
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/public/kpfonts/jkpsyc.tfm" 1172956184 1028 a2825e2c40d04ba8c0af3998464d86e1 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/public/mathpazo/fplmr.tfm" 1136793854 1032 7fa31d93ecd4cbdfac02c7a1ebc6facc ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247596667 31099 342ef5a582aacbd3346f3cf4579679fa ""
+  "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpex.pfb" 1267044638 26063 1691ba566b0401a2658e6574f5f241e5 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb" 1266998258 29813 d05f8d6ea0d8afa920af22dddafc33f2 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb" 1266998218 30461 69b749e6d9e6ecbcbda833c4699db58d ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb" 1240295540 35294 e88bb6b7bdd82f594dee041ddea9423c ""
@@ -196,10 +197,10 @@
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1636713860 4545 d84d0b20a11b9c36c6ecf45697be591c ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Users/steve/Desktop/CS3800 Homeworks/hw02/hw2-1.tex" 1658117512 8926 1db1f0b70fdd402cdd1b9238f90f0a4e ""
-  "hw2-1.aux" 1658117515 591 01d998c994f59674ccc3a65946a3a465 "pdflatex"
+  "c:/Users/steve/Desktop/CS3800 Homeworks/hw02/hw2-1.tex" 1658193360 10380 501c60d989b3605981f057240d51a036 ""
+  "hw2-1.aux" 1658193363 591 01d998c994f59674ccc3a65946a3a465 "pdflatex"
   "hw2-1.out" 0 -1 0 "pdflatex"
-  "hw2-1.tex" 1658117512 8926 1db1f0b70fdd402cdd1b9238f90f0a4e ""
+  "hw2-1.tex" 1658193360 10380 501c60d989b3605981f057240d51a036 ""
   "p1_images/ans.jpg" 1658112137 292255 5d87bc61439e73ff668fcd4963074ea7 ""
   "p1_images/work.jpg" 1658112489 1135117 8dbe1de47d3271af507394144ed6270b ""
   "p3_images/d1.jpg" 1658106020 195306 54e18330182eff4d70f26bf54524d2d0 ""

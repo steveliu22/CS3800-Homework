@@ -268,16 +268,19 @@ For each of the following languages over $\Sigma = \{g, q\}$, state whether or n
 \item \textbf{[3 pts.]}  $L_1 = \{w |  w\in \{0,1\}^*; \text{number of 00 substrings is the same as the number of 11 substrings}\}$
 
 \solution 
-
+\\ Assume true, that $L_1$ is a regular language so the Pumping Lemma applies to $L_1$. Let $P$ be the pumping length. Let $S = (00)^P(11)^P$. We know that via the Pumping Lemma, $\left\lvert xy \right\rvert \leq P$
+which means that $y$ must consist of some number of pairs of only zeroes for string $S$. However, we also know that the Pumping Lemma states $xy^iz \subseteq L_1$ which is not true when $i = 3$ for $S$ since $xyyyz \nsubseteq L_1$ ($xy = (00)^P$ and $z = (11)^P$ and we know that $y$ must only consist of pairs of zeroes which means that adding more $y$s means that there will be more pairs of zeroes thans ones). Thus, by contradiction, $L_1$ does not uphold the Pumping Lemma which means that $L_1$ is not regular.
 
 \item \textbf{[3 pts.]}  $L_2 = \{0^n1^m | n,m \geq 5; n,m \in \mathbb{N}\}$
 
 \solution 
 
+(00000)(0)*(11111)(1)*
 
 \item \textbf{[3 pts.]}  $L_3 = \{w |  w\in \{0,1\}^*; \text{the length of w is odd and contains a 1 as the middle character}\}$
 
 \solution 
+\\ Assume true, that $L_3$ is a regular language so the Pumping Lemma applies to $L_3$. Let $P$ be the pumping length. Let $S = (00)^P1(00)^P$. We know that via the Pumping Lemma, $\left\lvert xy \right\rvert \leq P$, which means that $y$ must consist of some number of pairs of only zeroes for string $S$. However, we also know that the Pumping Lemma states $xy^iz \subseteq L_3$ which is not true when $i = 3$ for $S$ since adding any extra zeroes on the left side of $S$ will result in the left side having more 0s than the right side, thus, not preserving the 1 being in the middle criteria. Thus, by contradiction, $L_3$ does not uphold the Pumping Lemma which means that $L_3$ is not regular.
 
 \end{enumerate}
 
