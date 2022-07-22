@@ -153,7 +153,7 @@ Due~\hwdue}
 
 \bigskip
 {\large
-\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+\noindent Name: Steve Liu  \yourname \vspace{2pt}\\ Collaborators: Ares Do, Jamie Lin, Eric Chapelaine, Michael Fang, HwiJoon Lee, Jaron Cui \yourcollaborators}
 
 \vspace{15pt}
 \begin{itemize}
@@ -208,16 +208,22 @@ Give a regular expression for the language of words over $\Sigma = \{0, 1\}$ whi
 
 \solution
 
-\noindent REGULAR EXPRESSION: 0(0 $\cup$ 1)*0 $\cup$ 1(0 $\cup$ 1)*1 \\
+\noindent REGULAR EXPRESSION: 0(0 $\cup$ 1)*0 $\cup$ 1(0 $\cup$ 1)*1 $\cup$ $ \epsilon $ $\cup$ 1 $\cup$ 0 \\
 
 \noindent 10101 $\rightarrow$ 1(010)1 is in 1(0 $\cup$ 1)*1 $\rightarrow$ you have the left and right side 1's with 010 in the middle which is in (0 $\cup$ 1)* \\~\\
 \noindent 0101110 $\rightarrow$ 0(10111)0 is in 0(0 $\cup$ 1)*0  $\rightarrow$ you have the left and right side 0's with 10111 in the middle which is in (0 $\cup$ 1)* \\~\\
 \noindent 111 $\rightarrow$ 1(1)1 is in 1(0 $\cup$ 1)*1  $\rightarrow$ you have the left and right side 1's with 1 in the middle which is in (0 $\cup$ 1)* \\~\\
 \noindent 111111011 $\rightarrow$ 1(1111101)1 is in 1(0 $\cup$ 1)*1  $\rightarrow$ you have the left and right side 1's with 1111101 in the middle which is in (0 $\cup$ 1)* \\~\\
-\noindent 0101 cannot be generated because the regular expression recognizes the language of all strings in which the first and last values are either both 0's or both 1's. Since 0101 has a 0 in the beginning and 1 in the end, this string is not in the regular expression. 
+\noindent 0101 cannot be generated because it does not belong in 0(0 $\cup$ 1)*0 as it does not start or end in 0, nor 1(0 $\cup$ 1)*1 for the same reason (it does not start or end with 1), nor is it an empty string, nor the string 1, and it is not the string 0.   \\~\\
 
+\noindent EXPLANATION: Getting the easiest cases out of the way, this language should accept the empty string, 1, and 0 since they all have zero 01s and 10s.
+\noindent For other strings, we can break down the possibilities into two separate cases: \\ ~ \\
 
+\noindent Case 1: The string begins with a 1, the next input in the string can either be a 0 or a 1. We can disregard all 1's until the first 0 since the number of 01's and 10's do not change. Once we reach our first 0, then we get to a case where there are one 10's and zero 01's in the string. Turns out, because of the "non-disjoint" rule of this language, if we let $n$ be the length of the string, the number of 10's can be counted in the first $n-1$ substring and the number of 01 can be counted in the last $n-1$ substring (i.e. take the string, 10101 has 2 01's and 2 10's, the first $n-1$th substring = 1010 has 2 10's and last $n-1th$ substring = 0101 has 2 01's). 
+As a result of this rule, the number of 10's will always be exactly one greater than the number of 01's if the string starts with a 1 and ends in a 0 because the first 0 will always be able to create a 10 but the last 0 will never be able to create a matching 01.  
+In order to guarantee that the first and last zeroes create an equivalent number 10's and 01's, the last input of the string has to be a 1 in order to match the last 0 in the string. \\~\\
 
+\noindent Case 2: The string begins with a 0. This case is entirely symmetrical to the first case with the same idea but this time the number of 01's will always be exactly one greater than the number 10's if the string begins with 0 and ends in 1 for the same symmetrical reason mentioned in Case 1. To remediate this issue, we can basically do the same thing by enforcing that the last input of the string has to be a 0.
 \newpage
 
 \begin{prob} NFA to RegEx (\emph{9 points})\end{prob}
@@ -258,7 +264,7 @@ $D_2$:
 \noindent D1: $(11 \cup 0(0 \cup 1)$*$0)$*  \\ D2: $(11\cup100)$* \\ 1st image is D1, 2nd image is D2
 
 \includegraphics[width=15cm, height=28cm]{./p3_images/d1.jpg} \\
-\includegraphics[width=15cm, height=30cm]{./p3_images/d2.jpg}
+\includegraphics[width=15cm, height=25cm]{./p3_images/d2a.jpg}
 
 
 \newpage
@@ -275,18 +281,18 @@ For each of the following languages over $\Sigma = \{g, q\}$, state whether or n
 
 \solution 
 \\ Assume true, that $L_1$ is a regular language so the Pumping Lemma applies to $L_1$. Let $P$ be the pumping length. Let $S = (00)^P(11)^P$. We know that via the Pumping Lemma, $\left\lvert xy \right\rvert \leq P$
-which means that $y$ must consist of some number of pairs of only zeroes for string $S$. However, we also know that the Pumping Lemma states $xy^iz \subseteq L_1$ which is not true when $i = 3$ for $S$ since $xyyyz \nsubseteq L_1$ ($xy = (00)^P$ and $z = (11)^P$ and we know that $y$ must only consist of pairs of zeroes which means that adding more $y$s means that there will be more pairs of zeroes thans ones). Thus, by contradiction, $L_1$ does not uphold the Pumping Lemma which means that $L_1$ is not regular.
+which means that $y$ must consist of some number of pairs of only zeroes for string $S$. We also know that the Pumping Lemma states $xy^iz \subseteq L_1$ which is not true when $i = 3$ for $S$ since $xyyyz \nsubseteq L_1$ as we will add more 00's to the string resulting in it having more 00's than we will have 11's. Thus, by contradiction, $L_1$ does not uphold the Pumping Lemma which means that $L_1$ is not regular.
 
 \item \textbf{[3 pts.]}  $L_2 = \{0^n1^m | n,m \geq 5; n,m \in \mathbb{N}\}$
 
 \solution 
-
+\\ There has to be atleast five 0's in the string and five 1's in the string where all of the zeroes must be before all of the ones. Thus the regular expression for this language would be:
 (00000)(0)*(11111)(1)*
 
 \item \textbf{[3 pts.]}  $L_3 = \{w |  w\in \{0,1\}^*; \text{the length of w is odd and contains a 1 as the middle character}\}$
 
 \solution 
-\\ Assume true, that $L_3$ is a regular language so the Pumping Lemma applies to $L_3$. Let $P$ be the pumping length. Let $S = (00)^P1(00)^P$. We know that via the Pumping Lemma, $\left\lvert xy \right\rvert \leq P$, which means that $y$ must consist of some number of pairs of only zeroes for string $S$. However, we also know that the Pumping Lemma states $xy^iz \subseteq L_3$ which is not true when $i = 3$ for $S$ since adding any extra zeroes on the left side of $S$ will result in the left side having more 0s than the right side, thus, not preserving the 1 being in the middle criteria. Thus, by contradiction, $L_3$ does not uphold the Pumping Lemma which means that $L_3$ is not regular.
+\\ Assume true, that $L_3$ is a regular language so the Pumping Lemma applies to $L_3$. Let $P$ be the pumping length. Let $S = (00)^P1(00)^P$. We know that via the Pumping Lemma, $\left\lvert xy \right\rvert \leq P$, which means that $y$ must consist of some number of pairs of only zeroes for string $S$. However, we also know that the Pumping Lemma states $xy^iz \subseteq L_3$ which is not true when $i = 3$ for $S$ since adding any extra zeroes on the left side of $S$ will result in the left side having more 0s than the right side which means that the string no longer has a 1 in the middle. Thus, by contradiction, $L_3$ does not uphold the Pumping Lemma which means that $L_3$ is not regular.
 
 \end{enumerate}
 
