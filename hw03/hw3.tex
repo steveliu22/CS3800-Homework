@@ -254,9 +254,16 @@ You should give a complete PDA. Your machine should accept strings $00000001011$
 
 \solution 
 
+\includegraphics[angle=90,origin=c, scale=0.15]{./p3/hwp3.jpg}
 
 
+$00101$: We start at $q1$, and epsilon transition while initializing the stack to $q2$. At $q2$, we read the first 0 and push it onto the stack to transition to $q3$. At $q3$, we read the next 0 and push it onto the stack, staying at $q3$. Again, at $q3$, the next input is 1, so we take the 1 transition to $q4$ while pushing nothing onto the stack. At $q4$, our next input is 0 so we transition to $q5$ and push nothing to the stack.
+At $q5$ we break into two branches, one where read the last input, 1, stay at $q5$ and remove a 0 off of the stack or we can take the epsilon transition to $q7$: 
+If we take the epsilon transition, then we would end up at $q6$ and then since the top of our stack is a 0, we can take the epsilon transition to $q7$. Since in this case we still have a 1 to read and there are no transitions in $q7$ for the 1 then this branch fails.
+If we take the $q5$ transition and remove a 0 off of the stack, then we can take the transition $q6$ and then since the top of our stack is still a 0, we can take the epsilon transition to $q7$. At $q7$, since we are finished with reading the string and we are in an accept state, the string is accepted. \\~\\
 
+$0101$: We start at $q1$, and epsilon transition while initializing the stack to $q2$. At $q2$, we read the first 0 and push it onto the stack to transition to $q3$. At $q3$ we read the 1 to transition to $q4$ and then the 0 to transition to $q5$, pushing nothing onto the stack in both transitions.
+At $q5$, we once again break into two branches: one where we take the epsilon branch and one where we stay at $q5$, read the 1, and pop a 0 off of the stack. For the same reason, taking the epsilon transition would result in the branch rejecting at $q7$. In the other branch, after we read the 1 and popped the top 0 off of the stack, then we can take the epsilon transition to $q6$. At $q6$, since our stack is now empty, we take the transition to $q8$ where the string will be rejected.
 
 
 
