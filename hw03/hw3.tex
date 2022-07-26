@@ -295,11 +295,11 @@ Thus, by contradiction, the string $S$ cannot uphold the pumping lemma despite b
 \solution \\
 Assume that $L$ is a context-free grammar, and so the context-free pumping lemme applies. Let $P$ be the pumping length. Let $S = a^Pb^{P^2}$, $S$ $\subseteq$ $L$, and $|S| \geq P$. Because we know that $|vxy| \leq P$, $vxy$ either can be all a's, all b's or, a mixture of a's and b's. \\
 
-Case 1: $vy$ consists of all a's. We know that $vy$ is non-empty ($|vy| > 0$), so if we let $i = 2$, $uvvxyyz$, must mean that the number of a's must increase. Since the number of a's increased by some arbitrary amount and the number of b's has not changed, then $|a|$ is no longer equal to $\sqrt{|b|}$ which means $uvvxyyz$ is not in $L$. This means that $S$ does not uphold the pumping lemma for this case. \\
+Case 1: $vxy$ consists of all a's. We know that $vy$ is non-empty ($|vy| > 0$), so if we let $i = 2$, $uvvxyyz$, must mean that the number of a's must increase. Since the number of a's increased by some arbitrary amount and the number of b's has not changed, then $|a|$ is no longer equal to $\sqrt{|b|}$ which means $uvvxyyz$ is not in $L$. This means that $S$ does not uphold the pumping lemma for this case. \\
 
-Case 2: $vy$ consists of all b's. We know that $vy$ is non-empty ($|vy| > 0$), so if we let $i = 2$, $uvvxyyz$, must mean that the number of b's must increase. Since the number of b's increased by some arbitrary amount and the number of a's has not changed, then $|b|$ has to now be greater than the $|a|^2$ which means $uvvxyyz$ is not in $L$. This means that $S$ does not uphold the pumping lemma for this case. \\
+Case 2: $vxy$ consists of all b's. We know that $vy$ is non-empty ($|vy| > 0$), so if we let $i = 2$, $uvvxyyz$, must mean that the number of b's must increase. Since the number of b's increased by some arbitrary amount and the number of a's has not changed, then $|b|$ has to now be greater than the $|a|^2$ which means $uvvxyyz$ is not in $L$. This means that $S$ does not uphold the pumping lemma for this case. \\
 
-Case 3: $vy$ consists of some mix of a's and b's. If we let, $i = 2$, we know that the number of a's and b's must increase by some arbitrary amount.  If we let $j$ be the number a's in $vy$ then the number of b's is $|vy| - j$.
+Case 3: $vxy$ consists of some mix of a's and b's. If we let, $i = 2$, we know that the number of a's and b's must increase by some arbitrary amount.  If we let $j$ be the number of 0's in $vxy$ then the number of 1's in $vxy$ is $P - j$
 \end{enumerate}
 
 

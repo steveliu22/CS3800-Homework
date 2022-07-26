@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  25 JUL 2022 22:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  25 JUL 2022 22:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1184,15 +1184,15 @@ Package rerunfilecheck Info: File `hw3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27460 strings out of 478351
- 518973 string characters out of 2837053
- 824794 words of memory out of 3000000
+ 27451 strings out of 478351
+ 518898 string characters out of 2837053
+ 825794 words of memory out of 3000000
  45241 multiletter control sequences out of 15000+600000
- 495945 words of font info for 160 fonts, out of 8000000 for 9000
+ 495498 words of font info for 154 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,89p,1047b,615s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyb.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on hw3.pdf (6 pages, 1604482 bytes).
+Output written on hw3.pdf (6 pages, 1604444 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  17 named destinations out of 1000 (max. 500000)
