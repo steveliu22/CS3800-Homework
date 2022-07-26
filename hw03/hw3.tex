@@ -283,20 +283,23 @@ At $q5$, we once again break into two branches: one where we take the epsilon br
 \item Prove that language $L = \{w | w \in \{a,b,c\}^*$ and the number of a's is equal to the number of b's and the number of a's is greater than the number of c's$\}$ is not context-free.
 
 \solution \\
-Assume that $L$ is a context-free grammar, and so the context-free grammar pumping lemma applies. Let $P$ be the pumping length. Let $S = a^{2P}c^{P}b^{2P}$,  $S$ $\subseteq$ $L$, and $|S| \geq P$. Because we know that $|vxy| \leq P$, $vxy$ cannot have both a's and b's. We can then break the string of $vy$ into 2 cases:
+Assume that $L$ is a context-free grammar, and so the context-free grammar pumping lemma applies. Let $P$ be the pumping length. Let $S = a^{2P}c^{P}b^{2P}$,  $S$ $\subseteq$ $L$, and $|S| \geq P$. Because we know that $|vxy| \leq P$, $vxy$ cannot have both a's and b's. We can then break the string of $vy$ into 2 cases: \\
 
-Case 1: $vy$ contains all of the same letters. If $vy$ consists of all a's or all b's then if we let $i = 2$, $uvvxyyz$, then the string is no longer in the language since either $|a| > |b|$ or $|b| > |a|$ depending on the scenario. If $vy$ consists of only c's then if we let $i = P$, $uv^Pxy^Pz$, then we know that $|c| > |a|$ which means that $S$ is no longer in the language. 
+Case 1: $vy$ contains all of the same letters. If $vy$ consists of all a's or all b's then if we let $i = 2$, $uvvxyyz$, then the string is no longer in the language since either $|a| > |b|$ or $|b| > |a|$ depending on the scenario. If $vy$ consists of only c's then if we let $i = P$, $uv^Pxy^Pz$, then we know that $|c| > |a|$ which means that $S$ is no longer in the language. \\ 
 
-Case 2: $vy$ contains some mix of a's and c's or b's and c's. If this is the case then if we let $i = 2$, $uvvxyyz$, we will have an unequal number of a's and c's depending on the scenario. If $vy$ is some mixture of a's and c's then we will have more a's than c's after pumping and if $vy$ consists of only b's and c's then we will have more c's than a's after pumping.
+Case 2: $vy$ contains some mix of a's and c's or b's and c's. If this is the case then if we let $i = 2$, $uvvxyyz$, we will have an unequal number of a's and c's depending on the scenario. If $vy$ is some mixture of a's and c's then we will have more a's than c's after pumping and if $vy$ consists of only b's and c's then we will have more c's than a's after pumping. \\
 
 Thus, by contradiction, the string $S$ cannot uphold the pumping lemma despite being in the grammar, $L$, which means that $L$ is not context-free.
 \item Prove that language $L = \{a^l b^{l^2} | l \in \mathbb{N}\}$ is not context-free.
 
 \solution \\
-Assume that $L$ is a context-free grammar, and so the context-free pumping lemme applies. Let $P$ be the pumping length. Let $S = a^Pb^{P^2}$, $S$ $\subseteq$ $L$, and $|S| \geq P$
+Assume that $L$ is a context-free grammar, and so the context-free pumping lemme applies. Let $P$ be the pumping length. Let $S = a^Pb^{P^2}$, $S$ $\subseteq$ $L$, and $|S| \geq P$. Because we know that $|vxy| \leq P$, $vxy$ either can be all a's, all b's or, a mixture of a's and b's. \\
 
+Case 1: $vy$ consists of all a's. We know that $vy$ is non-empty ($|vy| > 0$), so if we let $i = 2$, $uvvxyyz$, must mean that the number of a's must increase. Since the number of a's increased by some arbitrary amount and the number of b's has not changed, then $|a|$ is no longer equal to $\sqrt{|b|}$ which means $uvvxyyz$ is not in $L$. This means that $S$ does not uphold the pumping lemma for this case. \\
 
+Case 2: $vy$ consists of all b's. We know that $vy$ is non-empty ($|vy| > 0$), so if we let $i = 2$, $uvvxyyz$, must mean that the number of b's must increase. Since the number of b's increased by some arbitrary amount and the number of a's has not changed, then $|b|$ has to now be greater than the $|a|^2$ which means $uvvxyyz$ is not in $L$. This means that $S$ does not uphold the pumping lemma for this case. \\
 
+Case 3: $vy$ consists of some mix of a's and b's. If we let, $i = 2$, we know that the number of a's and b's must increase by some arbitrary amount.  If we let $j$ be the number a's in $vy$ then the number of b's is $|vy| - j$.
 \end{enumerate}
 
 

@@ -1108,6 +1108,9 @@ INPUT .\p3\hwp3.jpg
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\vf\public\kpfonts\jkpmn7t.vf
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmne.tfm
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmn8r.tfm
+INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\vf\public\kpfonts\jkpmn7t.vf
+INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmne.tfm
+INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmn8r.tfm
 INPUT hw3.aux
 INPUT .\hw3.out
 INPUT .\hw3.out
