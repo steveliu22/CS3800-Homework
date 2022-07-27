@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  25 JUL 2022 22:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  26 JUL 2022 23:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1135,7 +1135,7 @@ File: ./p3/hwp3.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./p3/hwp3.jpg  used on input line 258.
 (pdftex.def)             Requested size: 2507.36139pt x 3338.4644pt.
 
-Overfull \hbox (58.36932pt too wide) in paragraph at lines 258--259
+Overfull \hbox (47.99426pt too wide) in paragraph at lines 258--259
 [][] 
  []
 
@@ -1179,22 +1179,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
-[6] (hw3.aux)
+[6] [7] (hw3.aux)
 Package rerunfilecheck Info: File `hw3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27451 strings out of 478351
- 518898 string characters out of 2837053
- 825794 words of memory out of 3000000
+ 27457 strings out of 478351
+ 518940 string characters out of 2837053
+ 826794 words of memory out of 3000000
  45241 multiletter control sequences out of 15000+600000
- 495498 words of font info for 154 fonts, out of 8000000 for 9000
+ 495681 words of font info for 157 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,89p,1047b,615s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 84i,7n,89p,1047b,608s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyb.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on hw3.pdf (6 pages, 1604444 bytes).
+Output written on hw3.pdf (7 pages, 1606322 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
+ 103 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
  32791 words of extra memory for PDF output out of 35830 (max. 10000000)
 
