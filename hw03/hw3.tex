@@ -286,7 +286,7 @@ Assume that $L$ is a context-free grammar, and so the context-free grammar pumpi
 
 Case 1: $vy$ contains all of the same letters. If $vy$ consists of all a's or all b's then if we let $i = 2$, $uvvxyyz$, then the string is no longer in the language since either $|a| > |b|$ or $|b| > |a|$ depending on the scenario. If $vy$ consists of only c's then if we let $i = P$, $uv^Pxy^Pz$, then we know that $|c| > |a|$ which means that $S$ is no longer in the language. \\ 
 
-Case 2: $vy$ contains some mix of a's and c's or b's and c's. If this is the case then if we let $i = 2$, $uvvxyyz$, we will have an unequal number of a's and c's depending on the scenario. If $vy$ is some mixture of a's and c's then we will have more a's than c's after pumping and if $vy$ consists of only b's and c's then we will have more c's than a's after pumping. \\
+Case 2: $vy$ contains some mix of a's and c's or b's and c's. If this is the case then if we let $i = 2$, $uvvxyyz$, we will have an unequal number of a's and c's depending on the scenario. If $vy$ is some mixture of a's and c's then we will have more a's than b's after pumping and if $vy$ consists of only b's and c's then we will have more b's than a's after pumping. \\
 
 Thus, by contradiction, the string $S$ cannot uphold the pumping lemma despite being in the grammar, $L$, which means that $L$ is not context-free.
 \item Prove that language $L = \{a^l b^{l^2} | l \in \mathbb{N}\}$ is not context-free.
