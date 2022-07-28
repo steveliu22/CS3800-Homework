@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  26 JUL 2022 23:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  27 JUL 2022 23:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1103,98 +1103,103 @@ Package microtype Info: Loading generic protrusion settings for font family
  [1
 
 {C:/Users/steve/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 188--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
 [2]
-<./p2/hw3q2b.jpg, id=28, 2507.3675pt x 3338.4725pt>
+<./p2/hw3q2b.jpg, id=28, 1843.88875pt x 3338.4725pt>
 File: ./p2/hw3q2b.jpg Graphic file (type jpg)
 <use ./p2/hw3q2b.jpg>
-Package pdftex.def Info: ./p2/hw3q2b.jpg  used on input line 234.
-(pdftex.def)             Requested size: 2507.36139pt x 3338.4644pt.
- [3 <./p2/hw3q2b.jpg>]
-<./p3/hwp3.jpg, id=36, 2507.3675pt x 3338.4725pt>
+Package pdftex.def Info: ./p2/hw3q2b.jpg  used on input line 233.
+(pdftex.def)             Requested size: 1843.88428pt x 3338.4644pt.
+
+Overfull \hbox (91.78656pt too wide) in paragraph at lines 233--234
+[][] 
+ []
+
+[3 <./p2/hw3q2b.jpg>] [4]
+<./p3/hwp3.jpg, id=40, 2507.3675pt x 3338.4725pt>
 File: ./p3/hwp3.jpg Graphic file (type jpg)
 <use ./p3/hwp3.jpg>
-Package pdftex.def Info: ./p3/hwp3.jpg  used on input line 258.
+Package pdftex.def Info: ./p3/hwp3.jpg  used on input line 257.
 (pdftex.def)             Requested size: 2507.36139pt x 3338.4644pt.
 
-Overfull \hbox (47.99426pt too wide) in paragraph at lines 258--259
+Overfull \hbox (47.99426pt too wide) in paragraph at lines 257--258
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--265
+Underfull \hbox (badness 10000) in paragraph at lines 260--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--265
+Underfull \hbox (badness 10000) in paragraph at lines 260--264
 
  []
 
-[4 <./p3/hwp3.jpg>] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 285--287
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
+[5 <./p3/hwp3.jpg>] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 284--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--297
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+Underfull \hbox (badness 10000) in paragraph at lines 294--296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
 
  []
 
-[6] [7] (hw3.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 299--300
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 305--310
+
+ []
+
+[8] (hw3.aux)
 Package rerunfilecheck Info: File `hw3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27457 strings out of 478351
- 518940 string characters out of 2837053
- 826794 words of memory out of 3000000
+ 27461 strings out of 478351
+ 518973 string characters out of 2837053
+ 825794 words of memory out of 3000000
  45241 multiletter control sequences out of 15000+600000
- 495681 words of font info for 157 fonts, out of 8000000 for 9000
+ 495830 words of font info for 159 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,89p,1047b,608s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyb.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on hw3.pdf (7 pages, 1606322 bytes).
+Output written on hw3.pdf (8 pages, 1325863 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
+ 108 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
  32791 words of extra memory for PDF output out of 35830 (max. 10000000)
 
