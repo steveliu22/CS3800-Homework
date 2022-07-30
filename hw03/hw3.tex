@@ -196,10 +196,10 @@ Show how to generate $aababaaab$ and $aaaabb$ with your grammar.
 
 A $\rightarrow$ AA $|$ aAbAa $|$ aAaAb $|$ bAaAa $|$ $\varepsilon$ \\~\\
 
-To generate $aababaaab$: A $\rightarrow$ AA $\rightarrow$ (aAaAb)(A) $\rightarrow$ (aAaAb)(AA) $\rightarrow$ (aAaAb)(aAbAa)(A) $\rightarrow$ (aAaAb)(aAbAa)(AA) $\rightarrow$ (aAaAb)(aAbAa)(aAaAb)(A) $\rightarrow$ (going to skip a few steps and replace all of the A's with the empty string) $\rightarrow$
+To generate $aababaaab$: A $\rightarrow$ AA $\rightarrow$ (aAaAb)(A) $\rightarrow$ replace the two leftmost A's with the empty string $\rightarrow$ (aab)(A) $\rightarrow$ (aab)(AA) $\rightarrow$ (aab)(aAbAa)(A) $\rightarrow$ replace the two leftmost A's with the empty string $\rightarrow$ (aab)(aba)(A) $\rightarrow$ (aab)(aba)(AA) $\rightarrow$ (aab)(aba)(aAaAb)(A) (going to skip a few steps and replace all of the A's with the empty string) $\rightarrow$
 aababaaab
 
-To generate $aaaabb$: A $\rightarrow$ aAaAb $\rightarrow$ aAa(aAaAb)b $\rightarrow$ (skipping a few steps, replacing all of the A's with the empty string)
+To generate $aaaabb$: A $\rightarrow$ aAaAb $\rightarrow$ aaAb $\rightarrow$ aa(aAaAb)b $\rightarrow$ (skipping a few steps, replacing all of the A's with the empty string)
 $\rightarrow$ aaaabb
 
 \end{enumerate}
@@ -224,7 +224,7 @@ $W \rightarrow aW | bW | \epsilon$
 
 \solution 
 
-The set of all strings in which it is an empty string, or the entire string is all a's, or the entire string is all b's, or the first input is $a$ and the last input is $b$ or the first input is $b$ and the last input is $a$.
+The set of all strings in which the first input is $a$ and the last input is $b$ or the first input is $b$ and the last input is $a$.
 
 \item \textbf{[5 pts.]} Give a PDA which recognizes the language given by grammar $G$. You should show all necessary states for ``guessing" rule $S$, but can use shorthand otherwise. Specify $\Sigma$ and $\Gamma$.
 
@@ -284,9 +284,9 @@ At $q5$, we once again break into two branches: one where we take the epsilon br
 \solution \\
 Assume that $L$ is a context-free grammar, and so the context-free grammar pumping lemma applies. Let $P$ be the pumping length. Let $S = a^{2P}c^{P}b^{2P}$,  $S$ $\subseteq$ $L$, and $|S| \geq P$. Because we know that $|vxy| \leq P$, $vxy$ cannot have both a's and b's. We can then break the string of $vy$ into 2 cases: \\
 
-Case 1: $vy$ contains all of the same letters. If $vy$ consists of all a's or all b's then if we let $i = 2$, $uvvxyyz$, then the string is no longer in the language since either $|a| > |b|$ or $|b| > |a|$ depending on the scenario. If $vy$ consists of only c's then if we let $i = P$, $uv^Pxy^Pz$, then we know that $|c| > |a|$ which means that $S$ is no longer in the language. \\ 
+Case 1: $vy$ contains all of the same letters. We know that $|vy| > 0$ so if $vy$ consists of all a's or all b's then if we let $i = 2$, $uvvxyyz$, the string will no longer be in the language. This is because we're increasing the number of a's or b's by an arbitrary amount which means that either $|a| > |b|$ or $|b| > |a|$ depending on the scenario. If $vy$ consists of only c's then if we let $i = P$, $uv^Pxy^Pz$, then we know that we've increased the number of c's by an amount greater than $P$ which means that $|c| > |a|$ and $S$ is no longer in the language. \\ 
 
-Case 2: $vy$ contains some mix of a's and c's or b's and c's. If this is the case then if we let $i = 2$, $uvvxyyz$, we will have an unequal number of a's and c's depending on the scenario. If $vy$ is some mixture of a's and c's then we will have more a's than b's after pumping and if $vy$ consists of only b's and c's then we will have more b's than a's after pumping. \\
+Case 2: $vy$ contains some mix of a's and c's or b's and c's. Since we know $|vy| > 0$ then if we let $i = 2$, $uvvxyyz$, we will get an unequal number of a's and b's depending on the scenario. If $vy$ is some mixture of a's and c's then that means the number a's has to increase by an arbitrary amount after pumping $i=2$ times, therefore, we will have more a's than b's after pumping. If $vy$ consists of only b's and c's then we will have more b's than a's after pumping for the same reason. In both cases, the string $S$ is no longer in the language. \\
 
 Thus, by contradiction, the string $S$ cannot uphold the pumping lemma despite being in the grammar, $L$, which means that $L$ is not context-free.
 \item Prove that language $L = \{a^l b^{l^2} | l \in \mathbb{N}\}$ is not context-free.
@@ -299,7 +299,7 @@ Case 1: $vy$ consists of all a's. We know that $vy$ is non-empty ($|vy| > 0$), s
 Case 2: $vy$ consists of all b's. We know that $vy$ is non-empty ($|vy| > 0$), so if we let $i = 2$, $uvvxyyz$, must mean that the number of b's must increase. Since the number of b's increased by some arbitrary amount and the number of a's has not changed, then $|b|$ has to now be greater than the $|a|^2$ which means $uvvxyyz$ is not in $L$. This means that $S$ does not uphold the pumping lemma for this case. \\
 
 Case 3: $vy$ consists of some positive mix of a's and b's. If we let, $i = 2$, we know that the number of a's and b's must increase by some arbitrary amount because $|vy| > 0$. 
-Let's assume that there are $k$ number of a's in $vy$ we then know that the number of b's is $|vy| - k$. Since $|a| = P$ and $|b| = P^2$ in the original $S$, the new number of a's after pumping $i = 2$ times is $(P - k) + 2k = P + k $ and the new number of b's is $P^2 - (|vy| - k) + 2(|vy| -  k) = P^2 + |vy| - k$. If we square the new number of a's, $(P + k)^2$, this value should equal to the number of new b's. Putting it all together
+Let's assume that there are $k$ number of a's in $vy$ we then know that the number of b's in $vy$ is $|vy| - k$. Since $|a| = P$ and $|b| = P^2$ in the original $S$, the new number of a's after pumping $i = 2$ times is $(P - k) + 2k = P + k $ and the new number of b's is $P^2 - (|vy| - k) + 2(|vy| -  k) = P^2 + |vy| - k$. If we square the new number of a's, $(P + k)^2$, this value should equal to the number of new b's. Putting it all together
 we get the equation: $(P + k)^2 = P^2 + |vy| - k$. 
 
 Simplification:\\
@@ -308,7 +308,8 @@ $P^2 + 2Pk + k^2 = P^2 + |vy| - k$\\
 $2Pk + k^2 = |vy| - k$\\
 $2Pk + k^2 + k = |vy|$\\
 
-However, since we know that $k > 0$, this means that $2Pk + k^2 + k > P$ which violates the condition that $|vxy| \leq P$.
+This equation tells us that in order for the pumped $S$ to be in $L$, the original length of $|vy|$ has to be equal to $2Pk + k^2 + k$.
+However, since we know that $k > 0$, this means that $2Pk + k^2 + k > P$ which violates the condition that $|vxy| \leq P$. This means that $S$ does not uphold the pumping lemma for this case.
 
 Thus, by contradiction, the string $S$ cannot uphold the pumping lemma despite being in the grammar, $L$, which means that $L$ is not context-free.
 

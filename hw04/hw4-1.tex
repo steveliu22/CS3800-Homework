@@ -1,0 +1,284 @@
+\documentclass[11pt]{article}
+
+\newcommand{\yourname}{}
+\newcommand{\yourcollaborators}{}
+
+\def\comments{0}
+
+%format and packages%\usepackage{algorithm, algorithmic}
+\usepackage{algpseudocode}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{verbatim}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{multirow}
+
+\usepackage{microtype}
+
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning, arrows.meta}
+
+	\definecolor{processblue}{cmyk}{0.96,0,0,0}
+
+
+\usepackage{kpfonts}
+\usepackage{palatino}
+	\DeclareMathAlphabet{\mathtt}{OT1}{cmtt}{m}{n}
+	\SetMathAlphabet{\mathtt}{bold}{OT1}{cmtt}{bx}{n}
+	\DeclareMathAlphabet{\mathsf}{OT1}{cmss}{m}{n}
+	\SetMathAlphabet{\mathsf}{bold}{OT1}{cmss}{bx}{n}
+	\renewcommand*\ttdefault{cmtt}
+	\renewcommand*\sfdefault{cmss}
+	\renewcommand{\baselinestretch}{1.06}
+\usepackage{tikz}
+	\usetikzlibrary{positioning}
+	\definecolor{processblue}{cmyk}{0.96,0,0,0}
+    \usetikzlibrary{matrix,arrows}
+
+\tikzset{
+->, % makes the edges directed
+>=Stealth, % makes the arrow heads bold
+node distance=3cm, % specifies the minimum distance between two nodes. Change if necessary.
+every state/.style={thick, fill=gray!10}, % sets the properties for each ’state’ node
+initial text=$ $, % sets the text that appears on the start arrow
+}
+	
+\usepackage{hyperref}
+
+\hypersetup{
+	linktocpage=true,
+	colorlinks=true,				% false: boxed links; true: colored links
+	linkcolor=blue,		% color of internal links
+	citecolor=blue,	% color of links to bibliography
+	urlcolor=blue,		% color of external links
+}
+
+\usepackage[boxruled,vlined,nofillcomment]{algorithm2e}
+	\SetKwProg{Fn}{Function}{\string:}{}
+	\SetKwFor{While}{While}{}{}
+	\SetKwFor{For}{For}{}{}
+	\SetKwIF{If}{ElseIf}{Else}{If}{:}{ElseIf}{Else}{:}
+	\SetKw{Return}{Return}
+
+%enclosure macros
+\newcommand{\paren}[1]{\ensuremath{\left( {#1} \right)}}
+\newcommand{\bracket}[1]{\ensuremath{\left\{ {#1} \right\}}}
+\renewcommand{\sb}[1]{\ensuremath{\left[ {#1} \right\]}}
+\newcommand{\ab}[1]{\ensuremath{\left\langle {#1} \right\rangle}}
+
+%probability macros
+\newcommand{\ex}[2]{{\ifx&#1& \mathbb{E} \else \underset{#1}{\mathbb{E}} \fi \left[#2\right]}}
+\newcommand{\pr}[2]{{\ifx&#1& \mathbb{P} \else \underset{#1}{\mathbb{P}} \fi \left[#2\right]}}
+\newcommand{\var}[2]{{\ifx&#1& \mathrm{Var} \else \underset{#1}{\mathrm{Var}} \fi \left[#2\right]}}
+
+%useful CS macros
+\newcommand{\poly}{\mathrm{poly}}
+\newcommand{\polylog}{\mathrm{polylog}}
+\newcommand{\zo}{\{0,1\}}
+\newcommand{\pmo}{\{\pm1\}}
+\newcommand{\getsr}{\gets_{\mbox{\tiny R}}}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\negl}{\mathrm{negl}}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\eqand}{\qquad \textrm{and} \qquad}
+\newcommand{\ind}[1]{\mathbb{I}\{#1\}}
+\newcommand{\sslash}{\ensuremath{\mathbin{/\mkern-3mu/}}}
+
+%mathbb
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+%mathcal
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+\newcommand{\opt}{\textsc{opt}}
+
+%theorem macros
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{clm}[thm]{Claim}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}[thm]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+
+
+\newcommand{\instructor}{Drew van der Poel}
+\newcommand{\hwnum}{4}
+\newcommand{\hwdue}{Sunday, August 7 at 11:59pm via \href{https://www.gradescope.com/courses/406943}{Gradescope}}
+
+\theoremstyle{theorem}
+\newtheorem{prob}{Problem}
+\newtheorem{sol}{Solution}
+
+\definecolor{cit}{rgb}{0.05,0.2,0.45} 
+\newcommand{\solution}{\medskip\noindent{\color{blue}\textbf{Solution:}}}
+
+\begin{document}
+{\Large 
+\begin{center}{CS3800: Theory of Computation} --- Summer II '22 --- \instructor \end{center}}
+{\large
+\vspace{10pt}
+\noindent Homework~\hwnum \vspace{2pt}\\
+Due~\hwdue}
+
+\bigskip
+{\large
+\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+
+\vspace{15pt}
+\begin{itemize}
+
+\item Make sure to put your name on the first page.  If you are using the \LaTeX~template we provided, then you can make sure it appears by filling in the \texttt{yourname} command.
+
+\item This assignment is due~\hwdue.  No late assignments will be accepted.  Make sure to submit something before the deadline.
+
+\item Solutions must be typeset.  If you need to draw any diagrams, you may draw them by hand as long as they are embedded in the PDF.  I recommend using the source file for this assignment to get started.
+
+\item I encourage you to work with your classmates on the homework problems. \emph{If you do collaborate, you must write all solutions by yourself, in your own words.}  Do not submit anything you cannot explain.  Please list all your collaborators in your solution for each problem by filling in the \texttt{yourcollaborators} command.
+
+\item Finding solutions to homework problems on the web, or by asking students not enrolled in the class is strictly forbidden.
+
+\end{itemize}
+
+
+
+\newpage
+
+\begin{prob} Turing Machine (\emph{6 points})\end{prob}
+
+Give a Turing machine that \emph{decides} the following language $L = \{ w \in \{A,B\}^* |$ the maximum number 
+$ \text{of non-overlapping occurences of substring~} AA \text{~is even}\}$.
+
+For example, $ \epsilon, AB, AAAA, AABBAA$, are all in $L$, while $AA, AAA, AABAABBAABBA$ are not.
+
+You should explicitly specify $\Sigma$ and $\Gamma$, in addition to providing a complete diagram of your Turing machine (with states, transitions, etc.). You should use $q_{acc}$ and $q_{rej}$ as your accept and reject states, respectively. You can assume that the input strings are given on the tape, with blank characters following the end of the string.
+
+Provide commentary on the purpose of each state/transition.
+
+\solution
+
+
+
+
+
+
+\newpage
+
+\begin{prob} Alternate TMs (\emph{2 points})\end{prob}
+
+Consider a new Turing machine that instead of moving one cell left or right, we can only move left 4 cells and right 2 cells. Can this new Turing machine be used in place of the standard Turing machine? That is, can it recognize any language that the standard one can? If yes, provide sound reasoning as to why this is. If not, give an example of a language which cannot be recognized by the new Turing machine, but can be recognized by the standard variant.
+
+Note that the input will still be given consecutively on the tape, it is not spaced out to accommodate the new machine.
+
+\solution
+
+
+
+
+\newpage
+
+\begin{prob} True/False: Enumerators (\emph{6 points})\end{prob}
+
+
+For each of the following assertions, state whether it is true or false, and justify your answer. You do not need prove undecidability. You can assume that the alphabet $\Sigma = \{0, 1\}$ in the following problems.
+
+\begin{enumerate}[label=(\alph*)]
+
+\item \textbf{[2 pts.]} If $E$ is an enumerator, then there exists a TM $D$ which is a decider such that $L(D) = L(E)$.  
+
+\solution 
+
+
+
+\item \textbf{[2 pts.]} If $D$ is a TM which is a decider, then there exists an enumerator $E$ such that $L(E) = L(D)$.
+
+
+\solution
+
+
+
+
+\item \textbf{[2 pts.]} Based on the above results, are deciders and enumerators equally powerful (can they decide/generate the same set of languages)? If yes, why is this the case? If no, which is more powerful and why is that?
+
+\solution
+
+
+
+\end{enumerate}
+
+
+\newpage
+
+\begin{prob} Decidable DFA Problems (\emph{16 points})\end{prob}
+
+Consider the following computational problem: Does a given DFA accept any strings of length 5?
+
+\begin{enumerate}[label=(\alph*)]
+
+\item \textbf{[1 pt.]} Give the corresponding language, $L^5_{DFA}$, for this problem.
+
+\solution
+
+
+
+
+\item \textbf{[5 pts.]} Prove that $L^5_{DFA}$ is decidable. You can do this by giving an algorithm, as we did in class. Justify your approach.
+
+\solution
+
+
+
+\item \textbf{[1 pt.]} Now we generalize the problem further; does a given DFA accept any strings of a length which is divisible by 5? Give the corresponding language $D^5_{DFA}$ for this new problem.
+
+\solution
+
+
+
+
+
+
+
+\item \textbf{[5 pts.]} Prove that $D^5_{DFA}$ is decidable. You can do this by giving an algorithm, as we did in class. Justify your approach.
+
+\solution
+
+
+
+\item \textbf{[4 pts.]} Consider generalizing the problem even further; does a given DFA accept any strings of a length which is divisible by a given value $d$? Give the corresponding language for this problem (you can name it whatever you want). Is this language decidable? If yes, state how to modify your algorithm from part (d). If no, argue why not.
+
+\solution
+
+
+\end{enumerate}
+
+\end{document}
