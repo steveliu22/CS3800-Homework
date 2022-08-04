@@ -252,13 +252,21 @@ Consider the following computational problem: Does a given DFA accept any string
 
 \solution
 
-
+$L^5_{DFA}$ = $\{<M> |$ DFA M accepts any strings of length 5$\}$
 
 
 \item \textbf{[5 pts.]} Prove that $L^5_{DFA}$ is decidable. You can do this by giving an algorithm, as we did in class. Justify your approach.
 
 \solution
+\\
+1. Let $T$ be the Turing Machine on $L^5_{DFA}$ \\ ~ \\
+2. On input $M$, generate all possible valid strings of length 5. \\ ~ \\
+3. For each string, $w$, generated run the Turing Machine, $D_{A-DFA}$, that decides the DFA acceptance problem (we were shown this in class) on input $<M, w>$. \\ ~ \\
+4. If $D_{A-DFA}$ ever rejects, then $T$ should reject and if $D_{A-DFA}$ accepts on all of the generated strings, then $T$ should accept. \\ ~ \\
 
+Firstly, we know that $D_{A-DFA}$ is a decider. Next, We know that by definition of a $DFA$, the set of input symbols in the alphabet must be finite and we also know that only valid strings of length 5 can be generated.
+Because of these two facts, there must be a finite upper-bound on the number of strings of length 5. Since the number of strings of length 5 is finite, we can run $DFA$ $M$ on each one of those strings and
+$T$ will guarantee to halt because it will run a finite amount of times. 
 
 
 \item \textbf{[1 pt.]} Now we generalize the problem further; does a given DFA accept any strings of a length which is divisible by 5? Give the corresponding language $D^5_{DFA}$ for this new problem.
@@ -266,7 +274,7 @@ Consider the following computational problem: Does a given DFA accept any string
 \solution
 
 
-
+$D^5_{DFA}$ = $\{<M> |$ DFA $M$ accepts any strings of length which is divisible by 5$\}$
 
 
 
@@ -274,13 +282,25 @@ Consider the following computational problem: Does a given DFA accept any string
 \item \textbf{[5 pts.]} Prove that $D^5_{DFA}$ is decidable. You can do this by giving an algorithm, as we did in class. Justify your approach.
 
 \solution
+\\
+1. Let $T_1$ be the Turing Machine on $D^5_{DFA}$ \\ ~ \\
+2. On input $M$, generate a set of all valid strings of length 5, let's denote this set as $L_a$. \\ ~ \\
+3. Construct $D_a$ to be the DFA that recognizes $L_a$* (the set of all strings that have a length of multiple of 5)  \\ ~ \\
+4. Construct $D_b$ to be the DFA that recognizes $L(D_a) \cap L(M)$ \\ ~ \\
+5. Run the Turing Machine, $D_{EQ-DFA}$, that decides the DFA equivalence problem (we were shown this in class) on input $<D_a, D_b>$ \\ ~ \\
+6. If $D_{EQ-DFA}$ accepts, then $T_1$ accepts and if $D_{EQ-DFA}$ then $T_1$ rejects. \\ ~ \\
 
 
 
 \item \textbf{[4 pts.]} Consider generalizing the problem even further; does a given DFA accept any strings of a length which is divisible by a given value $d$? Give the corresponding language for this problem (you can name it whatever you want). Is this language decidable? If yes, state how to modify your algorithm from part (d). If no, argue why not.
 
 \solution
+\\
+Let $L_{D}$ = $\{<M, d> |$ DFA $M$ accepts any strings of length which is divisible by $d$ $\}$ \\
+$L_D$ is decidable and we can modify the descriptions of step 2 and 3 from part d.\\
 
+Step 2: We will now generate all valid strings of length $d$ rather than length 5\\
+Step 3: $L_a$ will now be a set of all strings that have a length of multiple of $d$
 
 \end{enumerate}
 
