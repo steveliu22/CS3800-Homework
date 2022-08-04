@@ -202,7 +202,9 @@ Note that the input will still be given consecutively on the tape, it is not spa
 
 \solution
 
+Yes, the new Turing Machine can be used in place of the standard Turing Machine because we can convert the standard Turing Machine into the new Turing Machine.
 
+1. For each character in the input, move the rest of 
 
 
 \newpage
@@ -216,22 +218,23 @@ For each of the following assertions, state whether it is true or false, and jus
 
 \item \textbf{[2 pts.]} If $E$ is an enumerator, then there exists a TM $D$ which is a decider such that $L(D) = L(E)$.  
 
-\solution 
-
+\solution \\
+False. An enumerator can also enumerate Turing-recognizable languages which means that $L(D)$ may not be equal to $L(E)$.
 
 
 \item \textbf{[2 pts.]} If $D$ is a TM which is a decider, then there exists an enumerator $E$ such that $L(E) = L(D)$.
 
 
-\solution
+\solution \\
+True. All Turing recognizable languages has an enumerator that enumerates all of the strings in the language. Therefore since the set of Turing-decidable languages is a subset of Turing-recognizable languages, there exists an enumerator that recognizes $D$. 
 
 
 
 
 \item \textbf{[2 pts.]} Based on the above results, are deciders and enumerators equally powerful (can they decide/generate the same set of languages)? If yes, why is this the case? If no, which is more powerful and why is that?
 
-\solution
-
+\solution \\
+No, enumerators are more powerful since they can generate Turing-recognizable languages while deciders can only recognize Turing-decidable languages which are a subset of Turing-recognizable.
 
 
 \end{enumerate}
