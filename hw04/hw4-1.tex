@@ -185,9 +185,12 @@ You should explicitly specify $\Sigma$ and $\Gamma$, in addition to providing a 
 
 Provide commentary on the purpose of each state/transition.
 
-\solution
+\solution \\
 
+\includegraphics[angle=90,origin=c, scale=0.15]{./hw4p1/hw4p1.jpg}
 
+\noindent$\Sigma$ = $\{A, B \}$ \\
+$\Gamma$ = $\{A, B, X, O, E\}$
 
 
 
@@ -203,10 +206,11 @@ Note that the input will still be given consecutively on the tape, it is not spa
 \solution \\
 No the new Turing machine variant cannot be used in place of the standard Turing machine. An example of language that the new Turing Machine can't recognize but the standard one can is: \\ ~ \\
 
-$L = $\{$ w | w \in \{0, 1\}$* and there is at least one 0 in $w$ $\}$ \\~\\
+\noindent $L = $\{$ w | w \in \{0, 1\}$* and there is at least one 0 in $w$ $\}$ \\~\\
 
-An example of a string that is in $L$ is $101$, however, the new TM won't recognize this string since the head has to move right two cells, so it will skip the 0 in the middle and reject the string. \\ 
-The standard TM would recognize this language since the algorithm involves walking through each symbol in the input one-by-one and finding the first 0. 
+\noindent An example of a string that is in $L$ is $101$, however, the new TM won't recognize this string since the head has to move right two cells, so it will skip the 0 in the middle and reject the string. \\ 
+
+\noindent The standard TM would recognize this language since the algorithm involves walking through each symbol in the input one-by-one and finding the first 0. 
 
 \newpage
 
