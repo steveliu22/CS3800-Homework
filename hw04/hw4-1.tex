@@ -200,12 +200,13 @@ Consider a new Turing machine that instead of moving one cell left or right, we 
 
 Note that the input will still be given consecutively on the tape, it is not spaced out to accommodate the new machine.
 
-\solution
+\solution \\
+No the new Turing machine variant cannot be used in place of the standard Turing machine. An example of language that the new Turing Machine can't recognize but the standard one can is: \\ ~ \\
 
-Yes, the new Turing Machine can be used in place of the standard Turing Machine because we can convert the standard Turing Machine into the new Turing Machine.
+$L = $\{$ w | w \in \{0, 1\}$* and there is at least one 0 in $w$ $\}$ \\~\\
 
-1. For each character in the input, move the rest of 
-
+An example of a string that is in $L$ is $101$, however, the new TM won't recognize this string since the head has to move right two cells, so it will skip the 0 in the middle and reject the string. \\ 
+The standard TM would recognize this language since the algorithm involves walking through each symbol in the input one-by-one and finding the first 0. 
 
 \newpage
 
@@ -219,14 +220,14 @@ For each of the following assertions, state whether it is true or false, and jus
 \item \textbf{[2 pts.]} If $E$ is an enumerator, then there exists a TM $D$ which is a decider such that $L(D) = L(E)$.  
 
 \solution \\
-False. An enumerator can also enumerate Turing-recognizable languages which means that $L(D)$ may not be equal to $L(E)$.
+False. $E$ can generate Turing-recognizable languages which $D$ cannot recognize which means that $L(D)$ may not be equal to $L(E)$.
 
 
 \item \textbf{[2 pts.]} If $D$ is a TM which is a decider, then there exists an enumerator $E$ such that $L(E) = L(D)$.
 
 
 \solution \\
-True. All Turing recognizable languages has an enumerator that enumerates all of the strings in the language. Therefore since the set of Turing-decidable languages is a subset of Turing-recognizable languages, there exists an enumerator that recognizes $D$. 
+True. All Turing recognizable languages have an enumerator that generates the strings in the language. Therefore since the set of Turing-decidable languages is a subset of Turing-recognizable languages, there exists an enumerator that recognizes the decider, $D$. 
 
 
 
@@ -259,14 +260,16 @@ $L^5_{DFA}$ = $\{<M> |$ DFA M accepts any strings of length 5$\}$
 
 \solution
 \\
-1. Let $T$ be the Turing Machine on $L^5_{DFA}$ \\ ~ \\
-2. On input $M$, generate all possible valid strings of length 5. \\ ~ \\
-3. For each string, $w$, generated run the Turing Machine, $D_{A-DFA}$, that decides the DFA acceptance problem (we were shown this in class) on input $<M, w>$. \\ ~ \\
-4. If $D_{A-DFA}$ ever rejects, then $T$ should reject and if $D_{A-DFA}$ accepts on all of the generated strings, then $T$ should accept. \\ ~ \\
+Let $T$ be the Turing Machine on $L^5_{DFA}$. On input $M$: \\ ~ \\
+1. Generate all possible valid strings of length 5, let's call this set of strings $L$. \\ ~ \\
+2. For each string, $w$ $\in$ $L$, run the Turing Machine, $D_{A-DFA}$, that decides the DFA acceptance problem (we were shown this in class) on input $<M, w>$. \\ ~ \\
+3. If $D_{A-DFA}$ ever accepts, then $T$ should accept and if $D_{A-DFA}$ rejects on all of the generated strings, then $T$ should reject. \\ ~ \\
 
-Firstly, we know that $D_{A-DFA}$ is a decider. Next, We know that by definition of a $DFA$, the set of input symbols in the alphabet must be finite and we also know that only valid strings of length 5 can be generated.
-Because of these two facts, there must be a finite upper-bound on the number of strings of length 5. Since the number of strings of length 5 is finite, we can run $DFA$ $M$ on each one of those strings and
-$T$ will guarantee to halt because it will run a finite amount of times. 
+
+For step 1, by the definition of a $DFA$, the set of input symbols in the alphabet must be finite and we also know that only valid strings of length 5 can be generated.
+Because of these two facts, the cardinality of the set of strings of length 5 must be a finite value since there are only so many combinations of strings of length 5 that can be created with a finite alphabet. \\ ~ \\
+For step 2, $D_{A-DFA}$ is a Turing Machine that decides whether or not a given DFA accepts a given string. Since the set of strings that are we are running through $D_{A-DFA}$ is finite and $D_{A-DFA}$ is a decider, this step must eventually halt. \\ ~ \\
+For step 3, if $D_{A-DFA}$ ever accepts then we know that the given DFA $M$ must accept at least one string of length 5 so $T$ would accept. Alternatively, if $D_{A-DFA}$ rejects on all strings then we want to $T$ to reject since there are no strings of length 5 that is accepted.
 
 
 \item \textbf{[1 pt.]} Now we generalize the problem further; does a given DFA accept any strings of a length which is divisible by 5? Give the corresponding language $D^5_{DFA}$ for this new problem.
@@ -283,24 +286,35 @@ $D^5_{DFA}$ = $\{<M> |$ DFA $M$ accepts any strings of length which is divisible
 
 \solution
 \\
-1. Let $T_1$ be the Turing Machine on $D^5_{DFA}$ \\ ~ \\
-2. On input $M$, generate a set of all valid strings of length 5, let's denote this set as $L_a$. \\ ~ \\
-3. Construct $D_a$ to be the DFA that recognizes $L_a$* (the set of all strings that have a length of multiple of 5)  \\ ~ \\
-4. Construct $D_b$ to be the DFA that recognizes $L(D_a) \cap L(M)$ \\ ~ \\
-5. Run the Turing Machine, $D_{EQ-DFA}$, that decides the DFA equivalence problem (we were shown this in class) on input $<D_a, D_b>$ \\ ~ \\
-6. If $D_{EQ-DFA}$ accepts, then $T_1$ accepts and if $D_{EQ-DFA}$ then $T_1$ rejects. \\ ~ \\
+Let $T_1$ be the Turing Machine on $D^5_{DFA}$. On input $M$: \\ ~ \\ 
+1. Generate a set of all valid strings of length 5, let's denote this set as $L$. \\ ~ \\
+2. Construct $D_{L^*}$ to be the DFA that recognizes $L$* (which is the set of all strings that have a length of multiple of 5)  \\ ~ \\
+3. Construct $D_{INTERSECTION}$ to be the DFA that recognizes $L(M) \cap L(D_{L^*})$ \\ ~ \\
+4. Run the Turing Machine, $E_{DFA}$, that decides the DFA emptiness problem (we were shown this in class) on input $<D_{INTERSECTION}>$ \\ ~ \\
+5. If $E_{DFA}$ accepts, then $T_1$ rejects and if $E_{DFA}$ rejects then $T_1$ accepts. \\ ~ \\
 
-
+For step 1, the process of generating all valid strings of length 5 is finite as explained in the earlier problem. \\ ~ \\ 
+For step 2, since we know that the set $L$ is a regular language (its Regular Expression would be $\Sigma\Sigma\Sigma\Sigma\Sigma $ where $\Sigma$ is the union of all characters in the alphabet of $M$) and that since regular languages are closed under the star operation, the resulting language $L$* is also a regular language which means it can be recognized by a DFA. Since we know that $L$ is the set of all strings that have a length of 5, then $L$* has to be the set of all strings that are divisible or is a multiple of 5 since appending strings of length 5 together gives you strings of multiples of 5. \\ ~ \\ 
+For step 3, unioning the language recognized by DFA $M$ and DFA $D_{L^*}$ will give you the set of all strings that are recognized by $M$ and has the property of its length being divisible by 5 by the definition of intersection. Furthermore, since we also know that regular languages are closed under intersection, the resulting language is also regular which means that there does exist a DFA that recognizes it. \\ ~ \\
+For step 4 + 5, $E_{DFA}$ is a Turing Machine that decides whether or not a given DFA accepts no string, so if we run $E_{DFA}$ on $<D_{INTERSECTION}>$ and $E_{DFA}$ accepts, then we know that the there are no strings in the language recognized by $M$ that satisfies the property of having a length divisible by 5 so we want $T_1$ to reject. Alternatively, if $E_{DFA}$ rejects, then we know there is at least one string in the language recognized by $M$ that does have length divisible 5, so $T_1$ would accept.
 
 \item \textbf{[4 pts.]} Consider generalizing the problem even further; does a given DFA accept any strings of a length which is divisible by a given value $d$? Give the corresponding language for this problem (you can name it whatever you want). Is this language decidable? If yes, state how to modify your algorithm from part (d). If no, argue why not.
 
 \solution
 \\
-Let $L_{D}$ = $\{<M, d> |$ DFA $M$ accepts any strings of length which is divisible by $d$ $\}$ \\
-$L_D$ is decidable and we can modify the descriptions of step 2 and 3 from part d.\\
+Let $L_{d}$ = $\{<M, d> |$ DFA $M$ accepts any strings of length which is divisible by $d$ $\}$ \\ ~ \\
+$L_d$ is decidable and we can modify steps 1 and 2 from the algorithm in part d.\\
 
-Step 2: We will now generate all valid strings of length $d$ rather than length 5\\
-Step 3: $L_a$ will now be a set of all strings that have a length of multiple of $d$
+Step 1: We will now generate all valid strings of length $d$ rather than length 5 so $L$ will now be a set of all strings that have a length of $d$ \\
+
+Step 2: $L$* will now be the set of all strings that have a length of multiple of $d$. \\ ~ \\
+
+JUSTIFICATION: \\
+Modification to step 1: Assuming $d$ is some finite value, the generation of all valid strings of length $d$ is still going to be a finite process for the same reasons stated in the previous parts. \\~\\ 
+Modification to step 2: $L$ is still going to be a regular language (its regular expression would just be $d$ number of $\Sigma$'s concatenated together) so if we star it, $L$* will still be another regular language. \\~\\ 
+
+Since the assumptions in the modified algorithm have not really changed, the rest of steps in the algorithm should follow through in the same manner. As a result, $L_{d}$ is a decidable language. 
+
 
 \end{enumerate}
 

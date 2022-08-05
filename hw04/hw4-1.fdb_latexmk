@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1659587490 "c:/Users/steve/Desktop/CS3800 Homeworks/hw04/hw4-1.tex" "hw4-1.pdf" "hw4-1" 1659587492
+["pdflatex"] 1659671911 "c:/Users/steve/Desktop/CS3800 Homeworks/hw04/hw4-1.tex" "hw4-1.pdf" "hw4-1" 1659671913
   "C:/Users/steve/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1657328666 97205 3fb51b557d06aae17c4f86c5a0b69e11 ""
   "C:/Users/steve/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1657328568 10326700 cae89d106d926737994da43e9d6d908e ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -11,6 +11,7 @@
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplri7t.tfm" 1136793854 1732 3671a0e54806deb8b706eb5e53aba0a5 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/palatino/pplri8r.tfm" 1136793854 2720 70000d5e623e601132eab3cded5b819b ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
+  "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/public/kpfonts/jkpex.tfm" 1266764020 1420 916081528bdeafb19bca325e7b18bd9e ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/public/kpfonts/jkpexa.tfm" 1226653648 1296 8c0a1856baf011e106ddf53856934ffe ""
@@ -24,6 +25,7 @@
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/public/kpfonts/jkpsyb.tfm" 1267541122 1104 e59328e827916b7ec83ae1a5950a6a4d ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/public/kpfonts/jkpsyc.tfm" 1172956184 1028 a2825e2c40d04ba8c0af3998464d86e1 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/tfm/public/mathpazo/fplmr.tfm" 1136793854 1032 7fa31d93ecd4cbdfac02c7a1ebc6facc ""
+  "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247596667 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb" 1266998258 29813 d05f8d6ea0d8afa920af22dddafc33f2 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb" 1266998218 30461 69b749e6d9e6ecbcbda833c4699db58d ""
@@ -184,6 +186,7 @@
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgffor.sty" 1621073245 348 ee405e64380c11319f0e249fed57e6c5 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfkeys.sty" 1621073245 274 5ae372b7df79135d240456a1c6f2cf9a ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1621073245 325 f9f16d12354225b7dd52a3321f085955 ""
+  "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/omsppl.fd" 1585253778 595 be451a105739548c4929bd91be18fae6 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1ppl.fd" 1585253778 1007 06b773644d960aac68add40fcb596208 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/palatino.sty" 1585926771 903 125278a9cae6071e87c6114370fad4cf ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ts1ppl.fd" 1585253778 653 35f1cf70bf09b6e2d22ee0902cfb1a8b ""
@@ -195,10 +198,10 @@
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1636713860 4545 d84d0b20a11b9c36c6ecf45697be591c ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/steve/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Users/steve/Desktop/CS3800 Homeworks/hw04/hw4-1.tex" 1659587489 12420 3339bf9c8ab7b4d62eb788b79eece0b3 ""
-  "hw4-1.aux" 1659587492 591 b45aeb9ec6b5e7aaa946e53b89d41268 "pdflatex"
+  "c:/Users/steve/Desktop/CS3800 Homeworks/hw04/hw4-1.tex" 1659671910 15761 f1a7cabd7f594195411854f722f910d8 ""
+  "hw4-1.aux" 1659671913 591 bbb5f8d8b9d3f25bd69325c9d8ccfdbb "pdflatex"
   "hw4-1.out" 0 -1 0 "pdflatex"
-  "hw4-1.tex" 1659587489 12420 3339bf9c8ab7b4d62eb788b79eece0b3 ""
+  "hw4-1.tex" 1659671910 15761 f1a7cabd7f594195411854f722f910d8 ""
   (generated)
   "hw4-1.aux"
   "hw4-1.log"

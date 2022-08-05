@@ -1091,6 +1091,11 @@ INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\vf\public\kpfonts\jkpmn7t.vf
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmne.tfm
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmn8r.tfm
+INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\omsppl.fd
+INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\omsppl.fd
+INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\omsppl.fd
+INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\omsppl.fd
+INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\vf\public\kpfonts\jkpmn7t.vf
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmne.tfm
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\tfm\public\kpfonts\jkpmn8r.tfm
@@ -1098,6 +1103,8 @@ INPUT hw4-1.aux
 INPUT .\hw4-1.out
 INPUT .\hw4-1.out
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\base\8r.enc
+INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT C:\Users\steve\AppData\Local\Programs\MiKTeX\fonts\type1\public\kpfonts\jkpmi.pfb
