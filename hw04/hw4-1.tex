@@ -153,7 +153,7 @@ Due~\hwdue}
 
 \bigskip
 {\large
-\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+\noindent Name: \yourname Steve Liu  \vspace{2pt}\\ Collaborators: \yourcollaborators}
 
 \vspace{15pt}
 \begin{itemize}
@@ -192,8 +192,51 @@ Provide commentary on the purpose of each state/transition.
 \noindent$\Sigma$ = $\{A, B \}$ \\
 $\Gamma$ = $\{A, B, X, O, E\}$
 
+\newpage
+\noindent State: find A \\ 
+The purpose of this state is to find the next uncrossed out A by continuously moving to the right on the tape. If we happen to move past the length of the input without finding any uncrossed out A's we can then check on the number of AA's we've found at the end of the input length.
+If the value is $\sqcup$ or E then we know that we've found either 0 AA's or an even number of AA's. Otherwise if it's odd then we've found an odd number of AA's \\~\\  
 
+\noindent$\delta$ (find A, A) $\rightarrow$ (find second A, X, R) - We've found the first uncrossed-out A so we want to cross it out and continue to find a second A \\ ~ \\
+\noindent$\delta$ (find A, B) $\rightarrow$ (find A, B, R) - Move right on the tape head until we find the first uncrossed out A \\ ~ \\
+$\delta$ (find A, X) $\rightarrow$ (find A, X, R) - Move right on the tape head until we find the first uncrossed out A \\ ~ \\
+$\delta$ (find A, $\sqcup$) $\rightarrow$ ($q_{acc}$, $\sqcup$, R) - We've reached the end of the input on the tape and we've found 0 AA's \\ ~ \\
+$\delta$ (find A, E) $\rightarrow$ ($q_{acc}$, E, R) - We've reached the end of the input on the tape without finding any extra A's and we've found an even number of AA's \\ ~ \\
+$\delta$ (find A, O) $\rightarrow$ ($q_{rej}$, O, R) - We've reached the end of the input on the tape without finding any extra A's and we've found an odd number of AA's \\ ~ \\
 
+\noindent State: find second A \\ 
+The purpose of this state is to check if we've found a second adjacent A. \\ ~ \\
+
+\noindent$\delta$ (find second A, A) $\rightarrow$ (find end of input, X, R) - We've found a second adjacent A so we want to cross it out and move to the end of the input\\ ~ \\
+\noindent$\delta$ (find second A, B) $\rightarrow$ (find A, B, R) - Did not find a second adjacent A so we want to continue finding the next uncrossed out A \\ ~ \\
+$\delta$ (find second A, $\sqcup$) $\rightarrow$ ($q_{acc}$, $\sqcup$, R) - We've reached the end of the input on the tape and we've found 0 AA's \\ ~ \\
+$\delta$ (find second A, E) $\rightarrow$ ($q_{acc}$, E, R) - We've reached the end of the input on the tape and we've found an even number of AA's \\ ~ \\
+$\delta$ (find second A, O) $\rightarrow$ ($q_{rej}$, O, R) - We've reached the end of the input on the tape and we've found an odd number of AA's \\ ~ \\
+
+\noindent State: find end of input \\ 
+Traverses to the end of the input string length, and marks whether or not we've seen an even or odd number of AA's. \\ ~ \\
+\noindent$\delta$ (find end of input, A) $\rightarrow$ (find end of input, A, R) - Keep moving the tape head right until we've reached the end\\ ~ \\
+\noindent$\delta$ (find end of input, B) $\rightarrow$ (find end of input, B, R) - Keep moving the tape head right until we've reached the end\\ ~ \\
+$\delta$ (find end of input, $\sqcup$) $\rightarrow$ (alternate odd/even, O, L) - We've reached the end of the input on the tape and we've found only 1 AA's \\ ~ \\
+$\delta$ (find end of input, E) $\rightarrow$ (alternate odd/even, O, L) - We've reached the end of the input on the tape and we've found an even number of previously so we want to switch it to odd \\ ~ \\
+$\delta$ (find end of input, O) $\rightarrow$ (alternate odd/even, E, L) - We've reached the end of the input on the tape and we've found an odd number of previously so we want to switch it to even \\ ~ \\
+
+\noindent State: alternate odd/even \\
+Alternates between E and O symbols to check whether or not we're seen an even or odd number of AA's \\ ~ \\
+\noindent$\delta$ (alternate odd/even, A) $\rightarrow$ (find next A, A, L) - After changing the even/odd mark at the end of the string, move left to find the next uncrossed out A\\ ~ \\
+\noindent$\delta$ (alternate odd/even, B) $\rightarrow$ (find next A, B, L) - After changing the even/odd mark at the end of the string, move left to find the next uncrossed out A\\ ~ \\
+\noindent$\delta$ (alternate odd/even, X) $\rightarrow$ (check $\#$ of AA's, X, R) - If the last value in the input string is an A that has been crossed out, we can then check move to the marked value at the end of the string to check if we've seen an even number of AA's or not\\ ~ \\
+
+\noindent State: find next A \\
+Moves tape head left to find the first instance of a crossed out A and resets the algorithm to repeat finding the next uncrossed out A. \\ ~ \\
+\noindent$\delta$ (find next A, A) $\rightarrow$ (find next A, A, L) - Moves tape head left to find the first instance of an uncrossed out A\\ ~ \\
+\noindent$\delta$ (find next A, B) $\rightarrow$ (find next A, B, L) - Moves tape head left to find the first instance of an uncrossed out A\\ ~ \\
+\noindent$\delta$ (find next A, X) $\rightarrow$ (find A, X, R) - We've found a crossed out A so we reset to find the next uncrossed out A\\ ~ \\
+
+\noindent State: check $\#$ of AA's \\
+If the last value on the input part of the tape is a crossed out A, we move the tape head to the right and check if we've seen an even number of AA's \\ ~ \\
+\noindent$\delta$ (check $\#$ of AA's , E) $\rightarrow$ ($q_{acc}$, O, R) - We've reached the end of the input on the tape and we've found an even number of AA's \\ ~ \\
+\noindent$\delta$ (check $\#$ of AA's , O) $\rightarrow$ ($q_{rej}$, E, R) - We've reached the end of the input on the tape and we've found an odd number of AA's \\ ~ \\
 
 \newpage
 
@@ -271,7 +314,7 @@ Let $T$ be the Turing Machine on $L^5_{DFA}$. On input $M$: \\ ~ \\
 
 
 For step 1, by the definition of a $DFA$, the set of input symbols in the alphabet must be finite and we also know that only valid strings of length 5 can be generated.
-Because of these two facts, the cardinality of the set of strings of length 5 must be a finite value since there are only so many combinations of strings of length 5 that can be created with a finite alphabet. \\ ~ \\
+Because of these two facts, the cardinality of the set of strings of length 5 must be a finite value since there are only so many combinations of strings of length 5 that can be created with a finite alphabet. The cardinality of this set would actually be $|\Sigma|^5$ where $\Sigma$ is $M$'s alphabet. \\ ~ \\
 For step 2, $D_{A-DFA}$ is a Turing Machine that decides whether or not a given DFA accepts a given string. Since the set of strings that are we are running through $D_{A-DFA}$ is finite and $D_{A-DFA}$ is a decider, this step must eventually halt. \\ ~ \\
 For step 3, if $D_{A-DFA}$ ever accepts then we know that the given DFA $M$ must accept at least one string of length 5 so $T$ would accept. Alternatively, if $D_{A-DFA}$ rejects on all strings then we want to $T$ to reject since there are no strings of length 5 that is accepted.
 
@@ -299,7 +342,7 @@ Let $T_1$ be the Turing Machine on $D^5_{DFA}$. On input $M$: \\ ~ \\
 
 For step 1, the process of generating all valid strings of length 5 is finite as explained in the earlier problem. \\ ~ \\ 
 For step 2, since we know that the set $L$ is a regular language (its Regular Expression would be $\Sigma\Sigma\Sigma\Sigma\Sigma $ where $\Sigma$ is the union of all characters in the alphabet of $M$) and that since regular languages are closed under the star operation, the resulting language $L$* is also a regular language which means it can be recognized by a DFA. Since we know that $L$ is the set of all strings that have a length of 5, then $L$* has to be the set of all strings that are divisible or is a multiple of 5 since appending strings of length 5 together gives you strings of multiples of 5. \\ ~ \\ 
-For step 3, unioning the language recognized by DFA $M$ and DFA $D_{L^*}$ will give you the set of all strings that are recognized by $M$ and has the property of its length being divisible by 5 by the definition of intersection. Furthermore, since we also know that regular languages are closed under intersection, the resulting language is also regular which means that there does exist a DFA that recognizes it. \\ ~ \\
+For step 3, intersecting the language recognized by DFA $M$ and DFA $D_{L^*}$ will give you the set of all strings that are recognized by $M$ and has the property of its length being divisible by 5 by the definition of intersection. Furthermore, since we also know that regular languages are closed under intersection, the resulting language is also regular which means that there does exist a DFA that recognizes it. \\ ~ \\
 For step 4 + 5, $E_{DFA}$ is a Turing Machine that decides whether or not a given DFA accepts no string, so if we run $E_{DFA}$ on $<D_{INTERSECTION}>$ and $E_{DFA}$ accepts, then we know that the there are no strings in the language recognized by $M$ that satisfies the property of having a length divisible by 5 so we want $T_1$ to reject. Alternatively, if $E_{DFA}$ rejects, then we know there is at least one string in the language recognized by $M$ that does have length divisible 5, so $T_1$ would accept.
 
 \item \textbf{[4 pts.]} Consider generalizing the problem even further; does a given DFA accept any strings of a length which is divisible by a given value $d$? Give the corresponding language for this problem (you can name it whatever you want). Is this language decidable? If yes, state how to modify your algorithm from part (d). If no, argue why not.
