@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  6 AUG 2022 23:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  6 AUG 2022 19:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/steve/Desktop/CS3800 Homeworks/hw04/hw4-1.tex"
-(c:/Users/steve/Desktop/CS3800 Homeworks/hw04/hw4-1.tex
+**"c:/Users/steve/Desktop/CS3800 Homeworks/hw05/hw5.tex"
+(c:/Users/steve/Desktop/CS3800 Homeworks/hw05/hw5.tex
 LaTeX2e <2022-06-01> patch level 3
 L3 programming layer <2022-06-16> (C:\Users\steve\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -955,8 +955,8 @@ File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count331
 \l__pdf_internal_box=\box94
-) (hw4-1.aux)
-\openout1 = `hw4-1.aux'.
+) (hw5.aux)
+\openout1 = `hw5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 146.
 LaTeX Font Info:    Trying to load font information for OML+jkp on input line 146.
@@ -1064,9 +1064,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring ON on input line 146.
- (hw4-1.out) (hw4-1.out)
+ (hw5.out) (hw5.out)
 \@outlinefile=\write4
-\openout4 = `hw4-1.out'.
+\openout4 = `hw5.out'.
 
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 161.
  (C:\Users\steve\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ppl.fd
@@ -1102,383 +1102,27 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [1
 
-{C:/Users/steve/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+{C:/Users/steve/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
-<./hw4p1/hw4p1.jpg, id=16, 2414.01875pt x 3198.95125pt>
-File: ./hw4p1/hw4p1.jpg Graphic file (type jpg)
-<use ./hw4p1/hw4p1.jpg>
-Package pdftex.def Info: ./hw4p1/hw4p1.jpg  used on input line 190.
-(pdftex.def)             Requested size: 2414.0129pt x 3198.94348pt.
-
-Overfull \hbox (27.06697pt too wide) in paragraph at lines 190--191
-[][] 
- []
-
-[2 <./hw4p1/hw4p1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 196--199
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--199
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--209
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--209
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 216--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--235
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 236--240
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--240
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--240
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--240
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 249--251
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--251
-
- []
-
-LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 252.
-(C:\Users\steve\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsppl.fd
-File: omsppl.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 252.
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
-
- []
-
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 308--314
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--314
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--314
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--314
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--314
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--320
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--320
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--342
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 343--347
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 343--347
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 343--347
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 350--354
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 350--354
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--362
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--362
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--362
-
- []
-
-[10] (hw4-1.aux)
-Package rerunfilecheck Info: File `hw4-1.out' has not changed.
+[3] [4] [5] [6] (hw5.aux)
+Package rerunfilecheck Info: File `hw5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27500 strings out of 478351
- 519546 string characters out of 2837053
- 824809 words of memory out of 3000000
- 45255 multiletter control sequences out of 15000+600000
- 496297 words of font info for 173 fonts, out of 8000000 for 9000
+ 27412 strings out of 478351
+ 518429 string characters out of 2837053
+ 820798 words of memory out of 3000000
+ 45227 multiletter control sequences out of 15000+600000
+ 493267 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,89p,1049b,599s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on hw4-1.pdf (10 pages, 759982 bytes).
+ 84i,5n,89p,1047b,448s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on hw5.pdf (6 pages, 101445 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
- 32786 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 86 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
+ 30733 words of extra memory for PDF output out of 35830 (max. 10000000)
 
