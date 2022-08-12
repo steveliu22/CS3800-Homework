@@ -191,6 +191,13 @@ For each of the following languages, state whether or not they are decidable. If
 \item \textbf{[4 pts.]} $L_2 = \{ \langle N, G \rangle |$ N is a NFA, G is a CFG, and $L(N) = L(G) = \emptyset \}$
 
 \solution
+$L_2$ is a decidable language. Let $T_2$ be the Turing Machine on $L_2$. On input $\langle N, G \rangle$:
+\begin{minipage}{.8\textwidth}
+	1a. Run $M$ on $w$: \\~\\
+	\indent If $M$ accepts then $B$ will accept. ($B$ will now accept everything including some string of length 5 if $M$ accepts $w$) \\~\\
+	\indent If $M$ rejects then $B$ will reject. ($B$ will be empty so it will not include any strings of length 5 if $M$ rejects $w$) \\~\\
+\end{minipage}
+
 
 
 
