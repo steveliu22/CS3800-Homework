@@ -212,6 +212,25 @@ Prove that $L_{5}$ is undecidable with a reducibility argument, using $A_{TM}$, 
 
 \solution
 
+\noindent Assume false, $L_{5}$ is decidable so there exists a Turing Machine, $A$, that decides $L_{5}$. \\~\\
+\noindent Let $S$ be a Turing Machine that takes in the same input as $A_{TM}$, $<M, w>$. \\~\\
+\noindent On input $\langle M, w \rangle$ for S: \\~\\
+\hangindent=0.7cm 1. Construct a TM, $B$, s.t. on input $\langle X \rangle$: \\~\\
+\hspace*{0.9cm}
+\begin{minipage}{.8\textwidth}
+		1a. Run $M$ on $w$: \\~\\
+		\indent If $M$ accepts then $B$ will accept. ($B$ will now accept everything including some string of length 5 if $M$ accepts $w$) \\~\\
+		\indent If $M$ rejects then $B$ will reject. ($B$ will be empty so it will not include any strings of length 5 if $M$ rejects $w$) \\~\\
+\end{minipage}
+
+2. Run $A$ on $B$: \\~\\
+\hspace*{0.9cm}
+\begin{minipage}{.8\textwidth}
+2a. If $A$ accepts (this means that $M$ has accepted $w$ which means that $L(B)$ has to include some string of length 5) then $S$ will accept. \\~\\
+2b. If $A$ rejects (this means that $M$ has rejected $w$ so $L(B)$ is the empty set) then $S$ will reject. \\~\\
+\end{minipage}
+
+\noindent This means that with the help of Turing Machine $A$ there exists the Turing Machine $S$ that decides $A_{TM}$ which is a contradiction since $A_{TM}$ is undecidable. This means that $A$ cannot exist which means that $L_5$ is undecidable.
 
 
 
@@ -242,6 +261,28 @@ Prove that $\overline{L_{5}}$ is unrecognizable. You should not use a reduction 
 
 \solution
 
+\noindent We must first show that $L_{5}$ is Turing-recognizable: \\~\\
+\hspace*{0.9cm}
+\begin{minipage}{1.8\textwidth}
+Let $T_{5}$ be the Turing Machine on $L_{5}$. On input $\langle M \rangle$: \\
+\hspace*{1.2cm}
+\begin{minipage}{1.8\textwidth}
+\vspace*{0.5cm}
+1. For each string $X$ in $L(M)$: \\
+	\hspace*{1.7cm}
+	\begin{minipage}{0.75\textwidth}
+	1a. Generate string $X$ and find $|X|$. \\
+	1b. If $|X| = 5$, $T_{5}$ should accept. Otherwise, continue the loop. 
+	\vspace*{0.5cm}	
+	\end{minipage}
+
+2. If the loop ever terminates then $T_{5}$ should reject.  \\~\\
+\end{minipage}
+\end{minipage}
+
+\noindent$T_{5}$ will guarantee to accept or reject by halting if the $L(M)$ is finite. \\
+Otherwise, if $L(M)$ is infinite then it's still possible for $T_{5}$ to halt by accepting or rejecting but it could also reject by looping. Thus, $L_{5}$ is a Turing-recognizable language. \\~\\
+We've proven that $L_{5}$ is Turing-recognizable from the above algorithm but it is not Turing-decidable from the previous problem. By the theorem that a language is decidable if and only if it is both Turing-recognizable and co-Turing-recognizable. Then since we know that $L_{5}$ is Turing-recognizable but not decidable then that means $\overline{L_{5}}$ must not be Turing-recognizable.
 
 
 
