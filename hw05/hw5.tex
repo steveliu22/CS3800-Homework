@@ -184,19 +184,38 @@ For each of the following languages, state whether or not they are decidable. If
 
 \item \textbf{[4 pts.]} $L_1 = \{ \langle P, T, w \rangle |$ P is a PDA, T is a Turing Machine, w is an input string and at least one of P or T accepts w$\}$
 
-\solution
+\solution \\
+$L_1$ is undecidable - \\~\\
+Assume true, that $L_1$ is decidable so there exists a Turing Machine, $T_1$, that decides $L_1$. \\~\\
+\noindent Let $S$ be a Turing Machine that takes in the same input as $A_{TM}$ (the Turing Machine acceptance problem), $<M, w'>$. \\~\\
+\noindent On input $\langle M, w' \rangle$ for S: \\~\\
+1. Construct a PDA, $E$, s.t. $L(E) = \varnothing$: \\~\\
+2. Run $T_1$ on inputs $<E, M, w'>$. If $T_1$ accepts then $S$ should accept otherwise if $T_1$ rejects then $S$ should reject. \\~\\
+This means that with the help of Turing Machine $T_1$ there exists the Turing Machine $S$ that decides $A_{TM}$ which is a contradiction since $A_{TM}$ is undecidable. This means that $T_1$ cannot exist which means that $L_5$ is undecidable. \\~\\
+Explanation: \\~\\
+The idea behind this proof is that if PDA $P$ rejects on all inputs then that means $L_1$ essentially boils down to $A_{TM}$, the Turing Machine Acceptance problem problem. Since we know that $A_{TM}$ is undecidable then we know that if $L_1$ exists then we could construct a Turing Machine that decides $A_{TM}$ which is a contradiction since $A_{TM}$ is undecidable.
 
 
-
+\newpage
 \item \textbf{[4 pts.]} $L_2 = \{ \langle N, G \rangle |$ N is a NFA, G is a CFG, and $L(N) = L(G) = \emptyset \}$
 
-\solution
-$L_2$ is a decidable language. Let $T_2$ be the Turing Machine on $L_2$. On input $\langle N, G \rangle$:
-\begin{minipage}{.8\textwidth}
-	1a. Run $M$ on $w$: \\~\\
-	\indent If $M$ accepts then $B$ will accept. ($B$ will now accept everything including some string of length 5 if $M$ accepts $w$) \\~\\
-	\indent If $M$ rejects then $B$ will reject. ($B$ will be empty so it will not include any strings of length 5 if $M$ rejects $w$) \\~\\
+\solution 
+
+$L_2$ is a decidable language. Let $T_2$ be the Turing Machine on $L_2$. On input $\langle N, G \rangle$: \\~\\
+\begin{minipage}{.9\textwidth}
+	1. Convert NFA $N$ to the equivalent DFA, $N_{DFA}$, and run TM $D_{E-DFA}$ on $N_{DFA}$. \\~\\
+	2. If $D_{E-DFA}$ rejects then $T_2$ should reject. \\~\\
+	3. If $D_{E-DFA}$ accepts then run TM $D_{E-CFG}$ on CFG $G$. \\~\\
+	4. If $D_{E-CFG}$ rejects then $T_2$ should reject. \\~\\
+	5. If $D_{E-CFG}$ accepts then $T_2$ should accept. \\~\\
 \end{minipage}
+
+Explanation:\\~\\
+Step 1: TM $D_{E-DFA}$ is the Turing Machine that decides the emptiness problem for DFAs so this step halts. \\~\\
+Step 3: TM $D_{E-CFG}$ is the Turing Machine that decides the emptiness problem for CFGs so this step halts. \\~\\
+We want to know if both $<N, G>$ are empty so we need both $D_{E-DFA}$ and $D_{E-CFG}$ to accept. Therefore, if at any point one of them rejects then we want $T_2$ to reject.
+
+
 
 
 
@@ -220,21 +239,21 @@ Prove that $L_{5}$ is undecidable with a reducibility argument, using $A_{TM}$, 
 \solution
 
 \noindent Assume false, $L_{5}$ is decidable so there exists a Turing Machine, $A$, that decides $L_{5}$. \\~\\
-\noindent Let $S$ be a Turing Machine that takes in the same input as $A_{TM}$, $<M, w>$. \\~\\
-\noindent On input $\langle M, w \rangle$ for S: \\~\\
+\noindent Let $S$ be a Turing Machine that takes in the same input as $A_{TM}$, $<M', w>$. \\~\\
+\noindent On input $\langle M', w \rangle$ for S: \\~\\
 \hangindent=0.7cm 1. Construct a TM, $B$, s.t. on input $\langle X \rangle$: \\~\\
 \hspace*{0.9cm}
 \begin{minipage}{.8\textwidth}
-		1a. Run $M$ on $w$: \\~\\
-		\indent If $M$ accepts then $B$ will accept. ($B$ will now accept everything including some string of length 5 if $M$ accepts $w$) \\~\\
-		\indent If $M$ rejects then $B$ will reject. ($B$ will be empty so it will not include any strings of length 5 if $M$ rejects $w$) \\~\\
+		1a. Run $M'$ on $w$: \\~\\
+		\indent If $M'$ accepts then $B$ will accept. ($L(B) = \Sigma$* so $L(B)$ must include some string of length 5 if $M'$ accepts $w$)  \\~\\
+		\indent If $M'$ rejects then $B$ will reject. ($L(B) = \varnothing$ so $L(B)$ does not include any strings of length 5 if $M'$ rejects $w$) \\~\\
 \end{minipage}
 
 2. Run $A$ on $B$: \\~\\
 \hspace*{0.9cm}
 \begin{minipage}{.8\textwidth}
-2a. If $A$ accepts (this means that $M$ has accepted $w$ which means that $L(B)$ has to include some string of length 5) then $S$ will accept. \\~\\
-2b. If $A$ rejects (this means that $M$ has rejected $w$ so $L(B)$ is the empty set) then $S$ will reject. \\~\\
+2a. If $A$ accepts (this means that $M'$ has accepted $w$ which means that $L(B)$ has to include some string of length 5) then $S$ will accept. \\~\\
+2b. If $A$ rejects (this means that $M'$ has rejected $w$ so $L(B)$ is the empty set) then $S$ will reject. \\~\\
 \end{minipage}
 
 \noindent This means that with the help of Turing Machine $A$ there exists the Turing Machine $S$ that decides $A_{TM}$ which is a contradiction since $A_{TM}$ is undecidable. This means that $A$ cannot exist which means that $L_5$ is undecidable.
@@ -249,10 +268,22 @@ Prove that $L_{5}$ is undecidable with a reducibility argument, using $A_{TM}$, 
 
 Recall the emptiness problem for Turing machines, $E_{TM}$. We showed in class that  $E_{TM}$ is undecidable via being reducible from $A_{TM}$. Now you're asked to construct an alternative proof of $E_{TM}$ being undecidable, using a \emph{diagonalization argument}. 
 
-\solution
+\solution\\
+Assume false, $E_{TM}$ is decidable so there exists some Turing Machine, $H$, that decides $E_{TM}$. \\~\\
+$H$ on $<M>$, where $M$ is some Turing Machine, will: \\
+1. Accept if $L(M) = \varnothing$ \\
+2. Reject if $L(M) \neq \varnothing$ \\~\\
+Let $E$ be some decider TM that takes in input $<M'>$ where $M'$ is some Turing Machine. \\~\\
+E = On input $<M'>$:\\~\\
+\hspace*{0.5cm}
+\begin{minipage}{1.8\textwidth}
+	1. Run $E$ on $M'$ \\~\\
+	2. If $H$ accepts then $E$ accepts and if $H$ rejects then $E$ rejects\\
+\end{minipage}
 
-
-
+\noindent $E$ accepts $<M'>$ iff $L(M') = \varnothing$. \\
+So if we run $E$ on $<E>$ then $E$ accepts $<E>$ iff $L(E) = \varnothing$. \\~\\
+\noindent This is the contradiction here since $E$ only accepts itself if the $L(E) = \varnothing$ which is impossible because if $E$ accepts itself then $L(E)$ cannot be empty since it contains at least $E$ in its language but this can only happen if $L(E)$ is empty. Thus by contradiction, $H$ cannot exist since it would allow the existence of $E$ which means that $E_{TM}$ is undecidable. 
 
 
 
@@ -275,21 +306,20 @@ Let $T_{5}$ be the Turing Machine on $L_{5}$. On input $\langle M \rangle$: \\
 \hspace*{1.2cm}
 \begin{minipage}{1.8\textwidth}
 \vspace*{0.5cm}
-1. For each string $X$ in $L(M)$: \\
-	\hspace*{1.7cm}
+1. Let $w_{1}, w_{2}, w_{3} ...$ be the list of all strings in $\Sigma$* \\~\\
+2. For $i = 1, 2, 3...$ : \\~\\
+	\hspace*{0.8cm}
 	\begin{minipage}{0.75\textwidth}
-	1a. Generate string $X$ and find $|X|$. \\
-	1b. If $|X| = 5$, $T_{5}$ should accept. Otherwise, continue the loop. 
+	2a. Run $M$ for $i$ steps on the first $w_{1}, w_{2}, w_{3} ... w_{i}$ strings. \\~\\
+	2b. If $M$ accepts some string $w_{j}$ where $1 \leq j \leq i$ and the length of $w_{j}$ is 5 then $T_{5}$\\ 
+		should accept. Otherwise, continue the loop. \\ 
 	\vspace*{0.5cm}	
 	\end{minipage}
-
-2. If the loop ever terminates then $T_{5}$ should reject.  \\~\\
 \end{minipage}
 \end{minipage}
 
-\noindent$T_{5}$ will guarantee to accept or reject by halting if the $L(M)$ is finite. \\
-Otherwise, if $L(M)$ is infinite then it's still possible for $T_{5}$ to halt by accepting or rejecting but it could also reject by looping. Thus, $L_{5}$ is a Turing-recognizable language. \\~\\
-We've proven that $L_{5}$ is Turing-recognizable from the above algorithm but it is not Turing-decidable from the previous problem. By the theorem that a language is decidable if and only if it is both Turing-recognizable and co-Turing-recognizable. Then since we know that $L_{5}$ is Turing-recognizable but not decidable then that means $\overline{L_{5}}$ must not be Turing-recognizable.
+\noindent$T_{5}$ will accept at some point if $L(M)$ contains some string that is of length 5 or $T_{5}$ will reject by looping if $L(M)$ does not contain any strings of length 5. Thus, $L_{5}$ is a Turing-recognizable language. \\~\\
+We've proven that $L_{5}$ is Turing-recognizable from the above algorithm but it is not Turing-decidable from a problem. By the theorem that a language is decidable if and only if it is both Turing-recognizable and co-Turing-recognizable. Then since we know that $L_{5}$ is Turing-recognizable but not decidable then that means $\overline{L_{5}}$ must not be Turing-recognizable.
 
 
 
@@ -315,7 +345,7 @@ We initially assume false, that $A_{TM}$ is decidable so there exists a Turing M
 
 \solution
 
-
+ACCEPTS INPUT OR REJECTS INPUT EITHER BY HALTING OR looping
 
 
 
@@ -323,7 +353,7 @@ We initially assume false, that $A_{TM}$ is decidable so there exists a Turing M
 
 \solution
 
-
+rejecting - we don't know if M rejects by halting or looping
 
 
 \item \textbf{[1 pt.]} Part (c) tells us this proof wouldn't work. But for the sake of exercise, for each remaining outcome from part (b), explain why this does allow us to draw conclusions about $HALT_{TM}$.
@@ -331,6 +361,7 @@ We initially assume false, that $A_{TM}$ is decidable so there exists a Turing M
 \solution
 
 
+REJECTING IS NOT useful
 
 
 \end{enumerate}
