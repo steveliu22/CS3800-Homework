@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  13 AUG 2022 01:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  13 AUG 2022 21:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1258,38 +1258,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 252--258
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 280--282
+Underfull \hbox (badness 10000) in paragraph at lines 284--287
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 280--282
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--283
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--283
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--283
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--283
-
- []
-
-
-Overfull \hbox (392.1123pt too wide) in paragraph at lines 271--283
-|  $[]$ 
  []
 
 
@@ -1297,55 +1267,145 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--287
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--287
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--289
+
+ []
+
+
+Overfull \hbox (704.13875pt too wide) in paragraph at lines 280--289
+|  $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--290
+
+ []
+
+
+Overfull \hbox (392.1123pt too wide) in paragraph at lines 271--290
+|  $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
+
+ []
+
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 313--317
+Underfull \hbox (badness 10000) in paragraph at lines 323--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--318
+Underfull \hbox (badness 10000) in paragraph at lines 319--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--318
+Underfull \hbox (badness 10000) in paragraph at lines 319--328
 
  []
 
 
-Overfull \hbox (712.67467pt too wide) in paragraph at lines 305--319
+Overfull \hbox (712.67467pt too wide) in paragraph at lines 315--329
 |  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--320
+Underfull \hbox (badness 10000) in paragraph at lines 312--330
 
  []
 
 
-Overfull \hbox (403.49324pt too wide) in paragraph at lines 302--320
+Overfull \hbox (403.49324pt too wide) in paragraph at lines 312--330
 |  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--323
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
 
  []
 
-[6] [7] (hw5.aux)
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 356--359
+
+ []
+
+[7] (hw5.aux)
 Package rerunfilecheck Info: File `hw5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27419 strings out of 478351
- 518486 string characters out of 2837053
- 820797 words of memory out of 3000000
+ 27425 strings out of 478351
+ 518537 string characters out of 2837053
+ 822798 words of memory out of 3000000
  45227 multiletter control sequences out of 15000+600000
- 493565 words of font info for 143 fonts, out of 8000000 for 9000
+ 493863 words of font info for 147 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,8n,89p,1047b,594s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmia.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyb.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyc.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on hw5.pdf (7 pages, 131727 bytes).
+Output written on hw5.pdf (7 pages, 132774 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  19 named destinations out of 1000 (max. 500000)

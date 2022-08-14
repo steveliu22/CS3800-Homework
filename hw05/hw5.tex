@@ -153,7 +153,7 @@ Due~\hwdue}
 
 \bigskip
 {\large
-\noindent Name: \yourname \vspace{2pt}\\ Collaborators: \yourcollaborators}
+\noindent Name: Steve Liu \yourname \vspace{2pt}\\ Collaborators: Jamie Lin, Ares Do, Eric Chapelaine, HwiJoon Lee, Jaron Cui \yourcollaborators}
 
 \vspace{15pt}
 \begin{itemize}
@@ -246,7 +246,7 @@ Prove that $L_{5}$ is undecidable with a reducibility argument, using $A_{TM}$, 
 \begin{minipage}{.8\textwidth}
 		1a. Run $M'$ on $w$: \\~\\
 		\indent If $M'$ accepts then $B$ will accept. ($L(B) = \Sigma$* so $L(B)$ must include some string of length 5 if $M'$ accepts $w$)  \\~\\
-		\indent If $M'$ rejects then $B$ will reject. ($L(B) = \varnothing$ so $L(B)$ does not include any strings of length 5 if $M'$ rejects $w$) \\~\\
+		\indent If $M'$ rejects either by halting or looping then $B$ will reject. ($L(B) = \varnothing$ so $L(B)$ does not include any strings of length 5 if $M'$ rejects $w$) \\~\\
 \end{minipage}
 
 2. Run $A$ on $B$: \\~\\
@@ -272,18 +272,28 @@ Recall the emptiness problem for Turing machines, $E_{TM}$. We showed in class t
 Assume false, $E_{TM}$ is decidable so there exists some Turing Machine, $H$, that decides $E_{TM}$. \\~\\
 $H$ on $<M>$, where $M$ is some Turing Machine, will: \\
 1. Accept if $L(M) = \varnothing$ \\
-2. Reject if $L(M) \neq \varnothing$ \\~\\
-Let $E$ be some decider TM that takes in input $<M'>$ where $M'$ is some Turing Machine. \\~\\
+2. Reject by halting if $L(M) \neq \varnothing$ \\~\\
+Construct $E$ s.t. it takes in input $<M'>$ where $M'$ is some Turing Machine. \\~\\
 E = On input $<M'>$:\\~\\
 \hspace*{0.5cm}
 \begin{minipage}{1.8\textwidth}
-	1. Run $E$ on $M'$ \\~\\
-	2. If $H$ accepts then $E$ accepts and if $H$ rejects then $E$ rejects\\
+	1. Construct $B$ s.t. it takes in input $<X>$ where $X$ is some string.\\~\\ 
+	$B$ = On input $<X>$: \\~\\
+	\hspace*{0.9cm}
+	\begin{minipage}{1.8\textwidth}
+		1a. Run $M'$ on input $<M'>$\\~\\
+		1b. If $M'$ accepts $<M'>$ then $B$ should accept. ($L(B) = \Sigma$* so $L(B) \neq \varnothing$)\\~\\
+		1c. If $M'$ rejects $<M'>$ then $B$ should reject. ($L(B) = \varnothing$) \\~\\
+	\end{minipage}
+	2. Run $H$ on $B$, if $H$ accepts then $E$ should accept, otherwise if $H$ rejects then $E$ should reject. \\~\\
 \end{minipage}
 
-\noindent $E$ accepts $<M'>$ iff $L(M') = \varnothing$. \\
-So if we run $E$ on $<E>$ then $E$ accepts $<E>$ iff $L(E) = \varnothing$. \\~\\
-\noindent This is the contradiction here since $E$ only accepts itself if the $L(E) = \varnothing$ which is impossible because if $E$ accepts itself then $L(E)$ cannot be empty since it contains at least $E$ in its language but this can only happen if $L(E)$ is empty. Thus by contradiction, $H$ cannot exist since it would allow the existence of $E$ which means that $E_{TM}$ is undecidable. 
+\noindent $E$ accepts $<M'>$ iff $H$ accepts $B$ which means that $L(B) = \varnothing$ which can only happen iff $M'$ rejects $<M'>$. \\~\\
+\noindent $E$ rejects $<M'>$ iff $H$ rejects $B$ which means that $L(B) \neq \varnothing$ which can only happen iff $M'$ accepts $<M'>$. \\~\\
+So if we run $E$ on input $<E>$: \\~\\
+1. $E$ accepts $<E>$ iff $L(B) = \varnothing$ which is only when $E$ rejects $<E>$. \\~\\
+2. $E$ rejects $<E>$ iff $L(B) \neq \varnothing$ which is only when $E$ accepts $<E>$. \\~\\
+\noindent This is the contradiction here since $E$ only accepts itself if $E$ rejects itself and $E$ rejects itself only when $E$ accepts itself which cannot happen. Thus by contradiction, $H$ cannot exist since it would allow the existence of $E$ which means that $E_{TM}$ is undecidable. 
 
 
 
@@ -319,7 +329,7 @@ Let $T_{5}$ be the Turing Machine on $L_{5}$. On input $\langle M \rangle$: \\
 \end{minipage}
 
 \noindent$T_{5}$ will accept at some point if $L(M)$ contains some string that is of length 5 or $T_{5}$ will reject by looping if $L(M)$ does not contain any strings of length 5. Thus, $L_{5}$ is a Turing-recognizable language. \\~\\
-We've proven that $L_{5}$ is Turing-recognizable from the above algorithm but it is not Turing-decidable from a problem. By the theorem that a language is decidable if and only if it is both Turing-recognizable and co-Turing-recognizable. Then since we know that $L_{5}$ is Turing-recognizable but not decidable then that means $\overline{L_{5}}$ must not be Turing-recognizable.
+We've proven that $L_{5}$ is Turing-recognizable from the above algorithm and we've also proven $L_{5}$ is not Turing-decidable from problem 2. Since we know that a language is decidable if and only if it is both Turing-recognizable and co-Turing-recognizable and since we know $L_{5}$ is Turing-recognizable but not decidable then that means $\overline{L_{5}}$ must not be Turing-recognizable.
 
 
 
@@ -343,26 +353,21 @@ We initially assume false, that $A_{TM}$ is decidable so there exists a Turing M
 
 \item \textbf{[1/2 pt.]} What are the possible outcomes of your above Turing machine on some input and what does each outcome mean?
 
-\solution
-
-ACCEPTS INPUT OR REJECTS INPUT EITHER BY HALTING OR looping
-
-
-
+\solution \\
+$T$ accepts: This means that $M$ has accepted $w$. \\~\\
+$T$ rejects by halting: This means that $M$ has rejected $w$ either by halting or looping.  
 \item \textbf{[2 pts.]} At least one of the outcomes above isn't helpful in concluding anything about $HALT_{TM}$. Identify any such outcome and explain why it doesn't  allow us to draw conclusions about $HALT_{TM}$?
 
 \solution
 
-rejecting - we don't know if M rejects by halting or looping
+$T$ rejects by halting is not a useful outcome because we don't know if $M$ has rejected by halting or looping on $w$. Therefore, iff $T$ rejects $w$ then we can't conclude that $M$ has halted on $w$ for the $HALT_{TM}$ problem because we don't know if $M$ rejected by halting or looping.
 
 
 \item \textbf{[1 pt.]} Part (c) tells us this proof wouldn't work. But for the sake of exercise, for each remaining outcome from part (b), explain why this does allow us to draw conclusions about $HALT_{TM}$.
 
 \solution
 
-
-REJECTING IS NOT useful
-
+The only remaining case is that $T$ accepts which means that $M$ has accepted $w$. This is useful because we can say that by definition, if $M$ accepts $w$ then we can conclude that $M$ must also halt on $w$ for the $HALT_{TM}$ problem. 
 
 \end{enumerate}
 
