@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  16 AUG 2022 11:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.8)  17 AUG 2022 11:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1103,96 +1103,261 @@ Package microtype Info: Loading generic protrusion settings for font family
  [1
 
 {C:/Users/steve/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 198--203
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--203
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--203
+Underfull \hbox (badness 10000) in paragraph at lines 192--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--203
+Underfull \hbox (badness 10000) in paragraph at lines 201--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--219
+Underfull \hbox (badness 10000) in paragraph at lines 201--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--219
+Underfull \hbox (badness 10000) in paragraph at lines 201--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--219
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 234--238
+Underfull \hbox (badness 10000) in paragraph at lines 201--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--238
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 211--222
 
  []
 
 
-Overfull \hbox (10.21497pt too wide) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 211--222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--222
+
+ []
+
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 237--246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--246
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
+
+ []
+
+
+Overfull \hbox (10.21497pt too wide) in paragraph at lines 254--255
 []\OT1/ppl/m/sc/10.95 (-20) DirectedHamiltonianCycle $\OT1/jkp/m/n/10.95 = \OMS/jkp/m/n/10.95 fh\OML/jkp/m/it/10.95 G\OMS/jkp/m/n/10.95 ij[]g$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 330--334
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 327--336
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--337
+Underfull \hbox (badness 10000) in paragraph at lines 296--305
 
  []
 
-[6] (hw6.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--305
+
+ []
+
+
+Overfull \hbox (112.24184pt too wide) in paragraph at lines 296--305
+|  $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--306
+
+ []
+
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--360
+|  $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--381
+|  $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--410
+
+ []
+
+
+Overfull \hbox (133.609pt too wide) in paragraph at lines 401--410
+|  $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--410
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--418
+
+ []
+
+
+Overfull \hbox (63.34404pt too wide) in paragraph at lines 394--418
+|  $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--418
+
+ []
+
+
+Overfull \hbox (120.61691pt too wide) in paragraph at lines 394--418
+|  $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--420
+
+ []
+
+
+Overfull \hbox (103.70636pt too wide) in paragraph at lines 391--420
+|  $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--421
+
+ []
+
+[8] [9] (hw6.aux)
 Package rerunfilecheck Info: File `hw6.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27619 strings out of 478351
- 522103 string characters out of 2837053
- 823796 words of memory out of 3000000
+ 27622 strings out of 478351
+ 522121 string characters out of 2837053
+ 825796 words of memory out of 3000000
  45372 multiletter control sequences out of 15000+600000
  497462 words of font info for 179 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,8n,89p,1047b,824s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpex.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyb.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyc.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on hw6.pdf (6 pages, 131179 bytes).
+{C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyb.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsyc.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/steve/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on hw6.pdf (9 pages, 129088 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
+ 119 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
  36883 words of extra memory for PDF output out of 42996 (max. 10000000)
 

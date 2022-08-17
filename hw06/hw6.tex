@@ -186,8 +186,11 @@ We assume that all functions are positive, continuous, non-decreasing and that t
 
 \item \textbf{[1 pt.]} For any pair of functions $f(n)$ and $g(n)$, either $f(n) + g(n) = O(f(n))$ or $f(n) + g(n) = O(g(n))$.
 
-\solution
-True 
+\solution\\
+True, you can break $f(n)$ and $g(n)$ into 3 cases: \\~\\
+
+$f(n) > g(n)$ \hspace{0.5cm} $\forall n \geq n_0$:\\~\\
+In this case,  $f(n) + g(n) = O(f(n)) $  
 
 
 
@@ -233,8 +236,14 @@ Consider the following problem \textsc{7th-Smallest}. You are given an array con
 
 \solution\\
 Let $M$ be the Turing Machine that decides \textsc{7th-Smallest} where the input to $M$ is $<A>$, the encoding of the input array. \\~\\
-The input array will use a binary encoding with an empty cell separating each number in the array. Let $n$ be the length of the input array and let $A_i$ be the $i$th number in $A$ then the length of the encoding, $\langle A \rangle$, is: \\~\\
-$(n-1) + \sum\limits_{i=1}^n(\log_2A_i)$
+The input array will use a unary encoding for each number with a $*$ delimiter separating each number in the array. Let $n$ be the length of the input array and let $L$ be the length of the string encoding for the largest number in $A$, then the length of the encoding, $\langle A \rangle$, is: \\
+$O(nL)$ \\~\\
+TM $M$ = On input $\langle A \rangle$: \\
+\hspace*{0.5cm}
+\begin{minipage}{.87\textwidth}
+	while
+\end{minipage}
+
 
 \newpage
 
@@ -278,8 +287,24 @@ Show that \textsc{DirectedHamiltonianCycle} is mapping reducible to \textsc{Undi
 
 \item \textbf{[2 pts.]} Recall $E_{TM}$, the Turing machine emptiness problem, and the $\overline{EQ_{TM}}$, the complement of the Turing machine equivalence problem. We know $E_{TM}$ is undecidable. Use a general reducibilty argument to show that $\overline{EQ_{TM}}$ is undecidable.
 
-\solution
+\solution \\
+Assume true that $\overline{EQ_{TM}}$ is decidable, so there exists a Turing Machine, $D$, that decides $\overline{EQ_{TM}}$. \\~\\
+Let $S$ be a Turing Machine that takes in the same inputs as the $E_{TM}$ problem, $\langle M\rangle$ where $M$ is some TM. \\~\\
+TM $S =$ on input $\langle M \rangle$: \\~\\
+\hspace*{0.54cm}
+\begin{minipage}{0.9\textwidth}
+	1. Construct a new Turing Machine, $B$ that takes in an arbitrary string $\langle x \rangle$\\~\\
+	TM $B$ = on input $\langle x \rangle$: \\~\\
+	\hspace*{0.9cm}
+	\begin{minipage}{1.2\textwidth}
+		a. $B$ rejects $x$\\
+	\end{minipage}
+	(So $L(B) = \varnothing$) \\~\\
+	2. Run $D$ on $\langle M, B \rangle$, if $D$ rejects by halting then $S$ should accept \\
+	else if $D$ accepts then $S$ should reject\\~\\
+\end{minipage}
 
+Therefore, with the help of $D$, the TM that decides $\overline{EQ_{TM}}$, there exists a TM $S$ that decides $E_{TM}$ which is a contradiction since $E_{TM}$ is undecidable. Hence, TM $D$ cannot exist which means that $\overline{EQ_{TM}}$ is undecidable.
 
 
 
@@ -288,13 +313,14 @@ Show that \textsc{DirectedHamiltonianCycle} is mapping reducible to \textsc{Undi
 Suppose we try to make an unrecognizability argument by reducing $E_{TM}$ to $\overline{EQ_{TM}}$.
 What is our initial assumption? What does this imply about the existence of a Turing machine? What is the input and behavior of this machine?
 
-\solution
-
+\solution \\
+We assume that $\overline{EQ_{TM}}$ is recognizable, so this implies the existence of a Turing Machine, $D$, that recognizes $\overline{EQ_{TM}}$. The input to $D$ would be $\langle M_1, M_2 \rangle$ where $M_1$ and $M_2$ are Turing Machines.
 
 
 \item \textbf{[1 pt.]} Now we want to work towards a contradiction. Given that we are reducing from $E_{TM}$, what is the contradiction we'd like to arrive at? What exactly would we need to show exists?
 
-\solution
+\solution \\
+We need to show that with the existence of $D$, we can construct a Turing Machine, $S$, that recognizes $E_{TM}$. This is the contradiction we would like to arrive at since we know $E_{TM}$ is unrecognizable and therefore, $S$, cannot exist. 
 
 
 
@@ -323,31 +349,75 @@ We use this simple process to illustrate the impact that the string encoding has
 \solution\\
 Let $M$ be the TM on this process, on input $\langle x \rangle$: \\~\\
 \hspace*{0.5cm}
-\begin{minipage}{.9\textwidth}
-1. while the tape is not empty: \hspace{0.5cm} $\rightarrow O(|\langle x \rangle| x)$ \\~\\
-\hspace*{0.9cm}
-\begin{minipage}{.9\textwidth}
-	a. count number of 1's on the tape and let $k$ be the number of 1's counted \\
-	b. if $k \neq x$, reject \\
-	c. else set $x$ to $x - 1$ and erase the last 1 on the tape\\ 
-	d. repeat step 1 \\
+\begin{minipage}{0.9\textwidth}
+1. move right until we've found the last 1 on the tape   \\~\\
+2. while we're currently on a 1: \\~\\
+\hspace*{0.54cm}
+\begin{minipage}{0.9\textwidth}
+	a. replace the 1 with a $\sqcup$ (empty cell) and move to the left by one \\
 \end{minipage}
-	if $x = 0$, check that the tape is blank  
+3. if we're currently on a $\sqcup$, $M$ will halt on an accept state  
 \end{minipage}
 
 
 \item \textbf{[2 pts.]} Now we update the notion of a checkpoint to enforce that the tape head is in the first (leftmost) cell when the encoding of each value is on the tape.
 Give an algorithm which follows this new notion of checkpoint. Analyze the running time in terms of (1) the length of the encoding of $x$ and (2) the value of $x$.
 
-\solution
-
+\solution \\
+Let $M$ be the TM on this new process, on input $\langle x \rangle$: \\~\\
+\hspace*{0.5cm}
+\begin{minipage}{0.9\textwidth}
+1. while we're currently on a 1: \\~\\
+\hspace*{0.54cm}
+\begin{minipage}{0.9\textwidth}
+	a. mark our current cell as $1$* \\
+	b. move right until we've found the last 1 \\
+	c. if we're currently on a 1 or $1$*, replace it with a $\sqcup$ (empty cell) \\
+	d. move left once \\
+	e. move left until we've at a $1$* or $\sqcup$ \\
+	f. if we're at a $1$* replace it with 1 \\
+\end{minipage}
+3. if we're currently on a $\sqcup$, $M$ will halt on an accept state    
+\end{minipage}
 
 
 \item \textbf{[4 pts.]} Now we consider a binary encoding. That is, if $x = 5$, $\langle x \rangle = 101$.
 Give an algorithm which follows the original notion of checkpoint used in part (a). Analyze the running time in terms of (1) the length of the encoding of $x$ and (2) the value of $x$.
 
-\solution
-
+\solution \\
+Let $M$ be the TM on this process, on input $\langle x \rangle$: \\~\\
+\hspace*{0.5cm}
+\begin{minipage}{0.9\textwidth}
+1. if we're currently on a 1 or 0: \\~\\
+\hspace*{0.6cm}
+\begin{minipage}{1.2\textwidth}
+	  a. mark the start as 1* \\
+	  b. move right until we've found the last 1 or 0 on the tape \\
+	  c. if we are on a 1, replace it with a 0\\
+	  d. else if we are on 1*: replace it with $\sqcup$\\
+	  e. else if we are on 0: \\~\\
+	  \hspace*{0.37cm}
+	  \begin{minipage}{1.1\textwidth}
+		i. move left until we find the next 1 or 1*: \\~\\
+		\hspace*{0.7cm}
+		\begin{minipage}{1.2\textwidth}
+			while we are moving left, replace 0's with 1's \\
+		\end{minipage}
+		ii. if we've found a 1, replace it with a 0 \\
+		iii. else if we've found a 1*, replace it with 0* \\
+		iv. else if we can't find anymore 1's or 1*'s, move right and replace all 0's, 1's and 0*'s with $\sqcup$\\
+		and proceed to step 3  \\
+	  \end{minipage}
+	  f. move left until we've found a 1* or 0*: \\~\\
+	\hspace*{0.6cm}
+	\begin{minipage}{1.2\textwidth}
+		i. if we've found a 1*, replace it with 1 \\
+		ii. if we've found a 0*, replace it with $\sqcup$ and shift all of the 1s and 0s to the left by 1 \\
+	\end{minipage}
+	g. repeat step 1 if condition applies \\~\\
+\end{minipage}
+2. if we're currently on a $\sqcup$, $M$ will halt on an accept state  
+\end{minipage}
 
 
 
