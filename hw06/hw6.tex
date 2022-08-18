@@ -188,12 +188,29 @@ We assume that all functions are positive, continuous, non-decreasing and that t
 
 \solution\\
 True, you can break $f(n)$ and $g(n)$ into 3 cases: \\~\\
+1. $f(n) > g(n)$ \hspace{0.5cm} $\forall n \geq n_0$:\\
+In this case, if $c$ is some constant then this inequality is true: \\ 
+$f(n) + g(n) \leq c * f(n) + f(n)$ \hspace{0.5cm} $\forall n \geq n_0$ \\
+$f(n) + g(n) \leq (c + 1) * f(n)$ \hspace{0.5cm} $c + 1$ is another constant we can call $c'$\\ 
+$f(n) + g(n) \leq c' * f(n)$ \\ 
+$f(n) + g(n) = O(f(n))$ \\ 
 
-$f(n) > g(n)$ \hspace{0.5cm} $\forall n \geq n_0$:\\~\\
-In this case,  $f(n) + g(n) = O(f(n)) $  
+2. $f(n) < g(n)$ \hspace{0.5cm} $\forall n \geq n_0$:\\
+In this case, if $c$ is some constant then this inequality is true: \\ 
+$f(n) + g(n) \leq c * g(n) + g(n)$ \hspace{0.5cm} $\forall n \geq n_0$ \\
+$f(n) + g(n) \leq (c + 1) * g(n)$\\ 
+$f(n) + g(n) \leq c' * g(n)$ \\ 
+$f(n) + g(n) = O(g(n))$ \\
+
+3. $f(n) = g(n)$ \hspace{0.5cm} $\forall n \geq n_0$:\\
+In this case, if $c$ is some constant then this inequality is true: \\ 
+$f(n) + g(n) \leq c * g(n) + g(n)$ \hspace{0.5cm} $\forall n \geq n_0$ \\
+$f(n) + g(n) \leq (c + 1) * g(n)$\\ 
+$f(n) + g(n) \leq c' * g(n)$ \\ 
+$f(n) + g(n) = O(g(n))$ \\ 
 
 
-
+\newpage
 \item \textbf{[1 pt.]} For any pair of functions $f(n)$ and $g(n)$, if $f(n) + g(n) = O(f(n))$ then $f(n) > g(n)$ for all $n \geq n_0$.
 
 \solution
@@ -236,13 +253,13 @@ Consider the following problem \textsc{7th-Smallest}. You are given an array con
 
 \solution\\
 Let $M$ be the Turing Machine that decides \textsc{7th-Smallest} where the input to $M$ is $<A>$, the encoding of the input array. \\~\\
-The input array will use a unary encoding for each number with a $*$ delimiter separating each number in the array. Let $n$ be the length of the input array and let $L$ be the length of the string encoding for the largest number in $A$, then the length of the encoding, $\langle A \rangle$, is: \\
+The input array will use a decimal encoding for each number with a $*$ delimiter separating each number in the array. Let $n$ be the length of the input array, let $L$ be the length of the string encoding for the largest number in $A$, and let $A_i$ be the number on the $i$-th number in $A$ then the length of the encoding, $\langle A \rangle$, is: \\
 $O(nL)$ \\~\\
-TM $M$ = On input $\langle A \rangle$: \\
-\hspace*{0.5cm}
-\begin{minipage}{.87\textwidth}
-	while
-\end{minipage}
+TM $M$ = On input $\langle A \rangle$: \\~\\
+\indent For $j = 1, 2, 3 ... n - 1$:
+\begin{enumerate}[leftmargin=.75cm]
+\item ssdasdads
+\end{enumerate}
 
 
 \newpage
@@ -273,10 +290,16 @@ Show that \textsc{DirectedHamiltonianCycle} is mapping reducible to \textsc{Undi
 \end{tikzpicture}
 
 
-\solution
+\solution \\
+If $G$ in \textsc{DirectedHamiltonianCycle} contains a directed Hamiltonian Cycle $\implies$ $G$ in \textsc{UndirectedHamiltonianCycle} contains a Hamiltonian Cycle \\~\\
+\noindent Given the graph $G = (V, E)$: \\
+We will convert the directed graph, $G$, to the undirected graph $G' = (V', E')$ where $V' = V$ and \\ for each edge, $(m, n) \in E$: \\
+\indent Add the undirected edge, $(m, n)$, to $E'$  \\~\\
 
-
-
+\noindent If $G'$ in \textsc{UndirectedHamiltonianCycle} contains a Hamiltonian Cycle $\implies$ $G$ in \textsc{DirectedHamiltonianCycle} contains a directed Hamiltonian Cycle \\~\\
+\noindent Given the graph $G' = (V', E')$ where $G'$ is the result of $f(G)$: \\
+We will convert the undirected graph, $G'$, to a directed graph $G'' = (V'', E'')$ where $V'' = V'$ and \\ for each edge, $(i, j) \in E'$: \\ 
+\indent Add the directed edge, $(i, j)$ to $E''$ \\~\\
 
 \newpage
 
@@ -293,12 +316,7 @@ Let $S$ be a Turing Machine that takes in the same inputs as the $E_{TM}$ proble
 TM $S =$ on input $\langle M \rangle$: \\~\\
 \hspace*{0.54cm}
 \begin{minipage}{0.9\textwidth}
-	1. Construct a new Turing Machine, $B$ that takes in an arbitrary string $\langle x \rangle$\\~\\
-	TM $B$ = on input $\langle x \rangle$: \\~\\
-	\hspace*{0.9cm}
-	\begin{minipage}{1.2\textwidth}
-		a. $B$ rejects $x$\\
-	\end{minipage}
+	1. Construct a new Turing Machine, $B$ that takes in an arbitrary string $\langle x \rangle$ such that on input $\langle x \rangle$, $B$ rejects $\langle x \rangle$\\~\\
 	(So $L(B) = \varnothing$) \\~\\
 	2. Run $D$ on $\langle M, B \rangle$, if $D$ rejects by halting then $S$ should accept \\
 	else if $D$ accepts then $S$ should reject\\~\\
@@ -314,7 +332,7 @@ Suppose we try to make an unrecognizability argument by reducing $E_{TM}$ to $\o
 What is our initial assumption? What does this imply about the existence of a Turing machine? What is the input and behavior of this machine?
 
 \solution \\
-We assume that $\overline{EQ_{TM}}$ is recognizable, so this implies the existence of a Turing Machine, $D$, that recognizes $\overline{EQ_{TM}}$. The input to $D$ would be $\langle M_1, M_2 \rangle$ where $M_1$ and $M_2$ are Turing Machines.
+We assume that $\overline{EQ_{TM}}$ is recognizable, so this implies the existence of a Turing Machine, $D$, that recognizes $\overline{EQ_{TM}}$. The input to $D$ would be $\langle M_1, M_2 \rangle$ where $M_1$ and $M_2$ are Turing Machines and $D$ would accept if $L(M_1) \neq L(M_2)$ and reject otherwise either by halting or looping.
 
 
 \item \textbf{[1 pt.]} Now we want to work towards a contradiction. Given that we are reducing from $E_{TM}$, what is the contradiction we'd like to arrive at? What exactly would we need to show exists?
@@ -326,9 +344,8 @@ We need to show that with the existence of $D$, we can construct a Turing Machin
 
 \item \textbf{[1 pt.]} Given what we are assuming in part (b) and what we'd like to show in part (c), explain why we aren't able to use our Turing machine from part (b) to complete the necessary task in part (c). 
 
-\solution
-
-
+\solution\\
+Let's say, we were to take a similar approach to this algorithm as in problem 4a where we run TM $D$ on $\langle M, B \rangle$ where $M$ is the input TM for $E_{TM}$ and B is some auxiliary TM where $L(B) = \varnothing$. The issue with doing this is that if $L(M) = \varnothing$ but TM $D$ rejects $\langle M, B \rangle$ by looping, then $S$ can never enter a state in which they accept $M$ by halting since $D$ will continuously run. 
 
 
 
@@ -350,13 +367,13 @@ We use this simple process to illustrate the impact that the string encoding has
 Let $M$ be the TM on this process, on input $\langle x \rangle$: \\~\\
 \hspace*{0.5cm}
 \begin{minipage}{0.9\textwidth}
-1. move right until we've found the last 1 on the tape   \\~\\
-2. while we're currently on a 1: \\~\\
+1. Move right until we've found the last 1 on the tape  \hspace{0.5cm} $\rightarrow O(|\langle x \rangle|)$ or $O(x)$   \\~\\
+2. While we're currently on a 1:  \\~\\
 \hspace*{0.54cm}
 \begin{minipage}{0.9\textwidth}
-	a. replace the 1 with a $\sqcup$ (empty cell) and move to the left by one \\
+	a. Replace the 1 with a $\sqcup$ (empty cell) and move to the left by one \hspace{0.5cm} $\rightarrow O(1)$  \\
 \end{minipage}
-3. if we're currently on a $\sqcup$, $M$ will halt on an accept state  
+(The loop in step 2 will go for $O(|\langle x \rangle|)$ or $O(x)$ times.) \\~\\  
 \end{minipage}
 
 
@@ -364,60 +381,47 @@ Let $M$ be the TM on this process, on input $\langle x \rangle$: \\~\\
 Give an algorithm which follows this new notion of checkpoint. Analyze the running time in terms of (1) the length of the encoding of $x$ and (2) the value of $x$.
 
 \solution \\
+\newpage
 Let $M$ be the TM on this new process, on input $\langle x \rangle$: \\~\\
 \hspace*{0.5cm}
 \begin{minipage}{0.9\textwidth}
-1. while we're currently on a 1: \\~\\
-\hspace*{0.54cm}
-\begin{minipage}{0.9\textwidth}
-	a. mark our current cell as $1$* \\
-	b. move right until we've found the last 1 \\
-	c. if we're currently on a 1 or $1$*, replace it with a $\sqcup$ (empty cell) \\
-	d. move left once \\
-	e. move left until we've at a $1$* or $\sqcup$ \\
-	f. if we're at a $1$* replace it with 1 \\
-\end{minipage}
-3. if we're currently on a $\sqcup$, $M$ will halt on an accept state    
+1. Mark the start 1* \hspace{0.5cm} $\rightarrow O(1)$ (The tape head should already be at the start.) \\~\\
+2. While we are currently on a 1 or 1*: \hspace{0.5cm} $\rightarrow O(1)$
+\begin{enumerate}[label=(\alph*),leftmargin=1.5cm]
+	\item Mark where we are as 1* \hspace{0.5cm} $\rightarrow O(1)$
+	\item Move right until we've found the last 1 \hspace{0.5cm} $\rightarrow O(|\langle x \rangle|)$ or $O(x)$ 
+	\begin{enumerate}
+		\item If we've found a 1 or $1$* (we will be stuck on $1$* if there are no more 1's left), replace it with a $\sqcup$ (empty cell) \hspace{0.5cm} $\rightarrow O(1)$
+	\end{enumerate}
+	\item Move left once \hspace{0.5cm} $\rightarrow O(1)$
+	\item Move left until we're at a $1$* or $\sqcup$ \hspace{0.5cm} $\rightarrow O(|\langle x \rangle|)$ or $O(x)$ 
+	\begin{enumerate}
+		\item If we've found a $1$* replace it with 1 \hspace{0.5cm} $\rightarrow O(1)$ 
+	\end{enumerate} 
+\end{enumerate}
+(The loop in step 2 will go for $O(|\langle x \rangle|)$ or $O(x)$ times.) \\~\\  
 \end{minipage}
 
+\newpage
 
 \item \textbf{[4 pts.]} Now we consider a binary encoding. That is, if $x = 5$, $\langle x \rangle = 101$.
 Give an algorithm which follows the original notion of checkpoint used in part (a). Analyze the running time in terms of (1) the length of the encoding of $x$ and (2) the value of $x$.
 
 \solution \\
-Let $M$ be the TM on this process, on input $\langle x \rangle$: \\~\\
-\hspace*{0.5cm}
-\begin{minipage}{0.9\textwidth}
-1. if we're currently on a 1 or 0: \\~\\
-\hspace*{0.6cm}
-\begin{minipage}{1.2\textwidth}
-	  a. mark the start as 1* \\
-	  b. move right until we've found the last 1 or 0 on the tape \\
-	  c. if we are on a 1, replace it with a 0\\
-	  d. else if we are on 1*: replace it with $\sqcup$\\
+Let $M$ be the TM on this process, on input $\langle x \rangle$:
+\begin{enumerate}
+	\item 1. While there exists a 1 on the tape:
+	\begin{enumerate}
+	\item Move right until we've found the last 1 or 0 on the tape
+	\item 
+\end{enumerate}
+\end{enumerate}
+	  a. Move right until we've found the last 1 or 0 on the tape \\
+	  If we are on a 1\\
+
 	  e. else if we are on 0: \\~\\
-	  \hspace*{0.37cm}
-	  \begin{minipage}{1.1\textwidth}
-		i. move left until we find the next 1 or 1*: \\~\\
-		\hspace*{0.7cm}
-		\begin{minipage}{1.2\textwidth}
-			while we are moving left, replace 0's with 1's \\
-		\end{minipage}
-		ii. if we've found a 1, replace it with a 0 \\
-		iii. else if we've found a 1*, replace it with 0* \\
-		iv. else if we can't find anymore 1's or 1*'s, move right and replace all 0's, 1's and 0*'s with $\sqcup$\\
-		and proceed to step 3  \\
-	  \end{minipage}
-	  f. move left until we've found a 1* or 0*: \\~\\
-	\hspace*{0.6cm}
-	\begin{minipage}{1.2\textwidth}
-		i. if we've found a 1*, replace it with 1 \\
-		ii. if we've found a 0*, replace it with $\sqcup$ and shift all of the 1s and 0s to the left by 1 \\
-	\end{minipage}
-	g. repeat step 1 if condition applies \\~\\
-\end{minipage}
 2. if we're currently on a $\sqcup$, $M$ will halt on an accept state  
-\end{minipage}
+
 
 
 
